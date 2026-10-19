@@ -1,0 +1,39 @@
+:root {
+  --acc: #5cc8e8;
+  --bg: #101114;
+  --fg: #f3f2ee;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--acc);
+}
+
+::selection {
+  background: var(--acc);
+  color: #111;
+}
+
+img {
+  max-width: 100%;
+}

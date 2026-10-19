@@ -1,0 +1,255 @@
+.root {
+  min-height: 100vh;
+  background: #e6e7ea;
+  color: #15161a;
+  padding: 24px 16px 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.root a {
+  color: #15161a;
+}
+
+.root a:hover {
+  color: #1c7fa6;
+}
+
+.toolbar {
+  width: 100%;
+  max-width: 816px;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  font-family: var(--font-mono), monospace;
+  font-size: 13px;
+}
+
+.root .toolLink {
+  color: #1c7fa6;
+}
+
+.page {
+  width: 100%;
+  max-width: 816px;
+  min-height: 1056px;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 12px 40px rgba(0, 0, 0, 0.08);
+  padding: 46px 56px;
+  font-size: 14.5px;
+  line-height: 1.45;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.page strong {
+  font-weight: 600;
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px 24px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #15161a;
+}
+
+.name {
+  margin: 0;
+  font-size: 34px;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+.headline {
+  margin-top: 8px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.acc {
+  color: #1c7fa6;
+}
+
+.contact {
+  text-align: right;
+  font-size: 12.5px;
+  line-height: 1.55;
+  color: #33353c;
+}
+
+.h2,
+.h2Flush {
+  margin: 0 0 6px;
+  font-family: var(--font-mono), monospace;
+  font-size: 11.5px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #1c7fa6;
+}
+
+.h2Flush {
+  margin: 0;
+}
+
+.summary {
+  margin: 0;
+  text-wrap: pretty;
+}
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  font-size: 13.5px;
+}
+
+.skillRow {
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr);
+  gap: 12px;
+}
+
+.skillLabel {
+  font-weight: 600;
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.block > .h2 {
+  margin: 0;
+}
+
+.role {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 4px 12px;
+}
+
+.roleName {
+  font-size: 16px;
+}
+
+.dates {
+  font-family: var(--font-mono), monospace;
+  font-size: 12px;
+  color: #55575e;
+}
+
+.sub {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #33353c;
+}
+
+.subGap {
+  margin-top: 4px;
+}
+
+.list {
+  margin: 0;
+  padding-left: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.stack {
+  font-size: 12.5px;
+  color: #55575e;
+}
+
+.runningHead {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 4px 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #d6d7db;
+  font-size: 12.5px;
+  color: #55575e;
+}
+
+.runningName {
+  font-weight: 600;
+  color: #15161a;
+}
+
+.facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px 40px;
+  padding-top: 4px;
+}
+
+.fact {
+  flex: 1 1 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.muted {
+  color: #33353c;
+}
+
+@media (max-width: 639px) {
+  .page {
+    min-height: 0;
+    padding: 28px 20px;
+  }
+
+  .contact {
+    text-align: left;
+  }
+
+  .skillRow {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+    margin-bottom: 6px;
+  }
+}
+
+@page {
+  size: letter;
+  margin: 0;
+}
+
+@media print {
+  .root {
+    background: #fff;
+    padding: 0;
+    gap: 0;
+  }
+
+  .toolbar {
+    display: none;
+  }
+
+  .page {
+    max-width: none;
+    width: 8.5in;
+    height: 11in;
+    min-height: 0;
+    box-shadow: none;
+    break-after: page;
+  }
+
+  .page:last-child {
+    break-after: auto;
+  }
+}
