@@ -31,7 +31,7 @@ type Job = { period: string; company: string; role: string; stack: string[]; ite
 
 export type Copy = {
   nav_ai: string; nav_studio: string; nav_exp: string; nav_about: string; nav_contact: string;
-  avail: string; kicker: string; role_prefix: string; words: string[]; hero_sub: string; glance: string[];
+  kicker: string; role_prefix: string; words: string[]; hero_sub: string; glance: string[];
   cta_work: string; cta_cv: string; stats: Stat[];
   sec_ai: string; ai_title: string; ai_desc: string; ai_items: AiItem[];
   ai_principles_label: string; ai_principles: Principle[]; ai_proof: string; ai_proof_cta: string;
@@ -47,7 +47,7 @@ export type Copy = {
 export const COPY: Record<Lang, Copy> = {
   en: {
     nav_ai: 'AI', nav_studio: 'GBS', nav_exp: 'Career', nav_about: 'About', nav_contact: 'Contact',
-    avail: 'Open to remote roles · US time-zone overlap', kicker: 'Frontend Engineer · AI-native · São Paulo, GMT-3',
+    kicker: 'Frontend Engineer · AI-native · São Paulo, GMT-3',
     role_prefix: 'Frontend engineer building',
     words: ['AI-powered workflows.', 'scalable interfaces.', 'micro frontends.', 'my own products.'],
     hero_sub: '6+ years shipping React and React Native products used by thousands of people in 5 countries and, lately, the AI agents and workflows that let teams ship them faster. Founder of GBS Tecnologia, the company behind Obra Nova and Lifedeck.',
@@ -92,7 +92,7 @@ export const COPY: Record<Lang, Copy> = {
     about_p1: 'I started as a Full Stack intern and quickly took ownership of complex projects, which shaped how I work: understand the business, ship, measure, improve. Over time I specialized in frontend: React and React Native, Micro Frontends, Design Systems and shared libraries used by many teams.',
     about_p2: 'Today I spend as much time designing how we build as building itself: AI agents, internal tooling and workflows that make a whole team faster. Running my own products at GBS keeps me honest about what actually matters to users.',
     sec_contact: 'Contact', contact_title: 'Let’s build something.',
-    contact_sub: 'Hiring for a frontend or AI-focused engineering role, curious about Obra Nova, or have a product idea? I usually reply within a day.',
+    contact_sub: 'Want to talk frontend or AI engineering, curious about Obra Nova, or have a product idea? I usually reply within a day.',
     copy: 'Copy email', copied: 'Copied ✓',
     cv_short: 'Résumé', back_top: 'Back to top',
     facts: [
@@ -121,7 +121,7 @@ export const COPY: Record<Lang, Copy> = {
   },
   pt: {
     nav_ai: 'IA', nav_studio: 'GBS', nav_exp: 'Carreira', nav_about: 'Sobre', nav_contact: 'Contato',
-    avail: 'Aberto a vagas remotas · horário compatível com os EUA', kicker: 'Engenheiro Frontend · AI-native · São Paulo, GMT-3',
+    kicker: 'Engenheiro Frontend · AI-native · São Paulo, GMT-3',
     role_prefix: 'Engenheiro frontend construindo',
     words: ['fluxos com IA.', 'interfaces escaláveis.', 'micro frontends.', 'meus próprios produtos.'],
     hero_sub: '6+ anos entregando produtos React e React Native usados por milhares de pessoas em 5 países e, mais recentemente, os agentes e fluxos com IA que fazem times entregarem mais rápido. Fundador da GBS Tecnologia, a empresa por trás do Obra Nova e do Lifedeck.',
@@ -166,7 +166,7 @@ export const COPY: Record<Lang, Copy> = {
     about_p1: 'Comecei como estagiário Full Stack e logo assumi projetos complexos, o que moldou meu jeito de trabalhar: entender o negócio, entregar, medir, melhorar. Com o tempo me especializei em frontend: React e React Native, Micro Frontends, Design Systems e bibliotecas usadas por vários times.',
     about_p2: 'Hoje passo tanto tempo desenhando como construímos quanto construindo: agentes de IA, ferramentas internas e fluxos que deixam um time inteiro mais rápido. Operar meus próprios produtos na GBS me mantém honesto sobre o que realmente importa para quem usa.',
     sec_contact: 'Contato', contact_title: 'Vamos construir algo.',
-    contact_sub: 'Contratando para uma vaga de frontend ou engenharia com foco em IA, curioso sobre o Obra Nova ou com uma ideia de produto? Costumo responder em até um dia.',
+    contact_sub: 'Quer conversar sobre frontend ou engenharia com IA, ficou curioso sobre o Obra Nova ou tem uma ideia de produto? Costumo responder em até um dia.',
     copy: 'Copiar e-mail', copied: 'Copiado ✓',
     cv_short: 'Currículo', back_top: 'Voltar ao topo',
     facts: [

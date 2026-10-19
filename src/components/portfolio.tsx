@@ -38,7 +38,6 @@ export function Portfolio() {
   const heroRef = useRef<HTMLElement>(null);
   const wordRef = useRef<HTMLSpanElement>(null);
   const marqueeRef = useRef<HTMLDivElement>(null);
-  const dotRef = useRef<HTMLSpanElement>(null);
   const cursorRef = useRef<SVGRectElement>(null);
   const shotARef = useRef<HTMLDivElement>(null);
   const shotBRef = useRef<HTMLDivElement>(null);
@@ -79,7 +78,6 @@ export function Portfolio() {
       ),
     );
     const loops: [Element | null, Keyframe[], KeyframeAnimationOptions][] = [
-      [dotRef.current, [{ boxShadow: '0 0 0 0 rgba(107,214,138,.55)' }, { boxShadow: '0 0 0 10px rgba(107,214,138,0)' }], { duration: 1800, iterations: Infinity }],
       [cursorRef.current, [{ opacity: 1 }, { opacity: 1, offset: 0.55 }, { opacity: 0.15, offset: 0.6 }, { opacity: 0.15, offset: 0.95 }, { opacity: 1 }], { duration: 1400, iterations: Infinity }],
       [marqueeRef.current, [{ transform: 'translateX(0)' }, { transform: 'translateX(-50%)' }], { duration: 42000, iterations: Infinity }],
       [shotARef.current, [{ transform: 'translateY(0)' }, { transform: 'translateY(-12px)' }, { transform: 'translateY(0)' }], { duration: 7000, iterations: Infinity, easing: 'ease-in-out' }],
@@ -167,10 +165,6 @@ export function Portfolio() {
         <div className={s.heroGlow} />
         <div className={s.heroInner}>
           <div data-intro="1" className={s.heroKicker}>
-            <span className={s.avail}>
-              <span ref={dotRef} className={s.availDot} />
-              {t.avail}
-            </span>
             <span>{t.kicker}</span>
           </div>
           <h1 className={s.heroTitle}>

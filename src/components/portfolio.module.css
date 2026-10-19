@@ -163,20 +163,6 @@
   letter-spacing: 0.08em;
 }
 
-.avail {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  color: var(--fg);
-}
-
-.availDot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #6bd68a;
-}
-
 .heroTitle {
   margin: 28px 0 0;
   font-weight: 600;
