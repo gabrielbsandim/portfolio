@@ -1,22 +1,28 @@
 import type { Metadata, Viewport } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
+import { SITE_URL } from '@/content/site';
 import './globals.css';
 
 const sans = Geist({ subsets: ['latin'], weight: ['300', '400', '500', '600', '700'], variable: '--font-sans' });
 const mono = Geist_Mono({ subsets: ['latin'], weight: ['400', '500'], variable: '--font-mono' });
 
+const TITLE = 'Gabriel Sandim · Product Engineer, Frontend & AI';
+const SHORT = 'React, TypeScript and AI agents in production. Founder of GBS Tecnologia.';
+
 export const metadata: Metadata = {
-  metadataBase: new URL('https://gbstec.dev.br'),
-  title: 'Gabriel Sandim · Frontend Engineer',
+  metadataBase: new URL(SITE_URL),
+  title: TITLE,
   description:
-    'Frontend engineer building AI-powered workflows, scalable interfaces and micro frontends. Founder of GBS Tecnologia, the company behind Obra Nova and Lifedeck.',
+    'Product engineer building AI-powered workflows, agents, scalable interfaces and micro frontends. Founder of GBS Tecnologia, the company behind Obra Nova and Lifedeck.',
+  alternates: { canonical: '/' },
   openGraph: {
-    title: 'Gabriel Sandim · Frontend Engineer',
-    description: 'React, TypeScript and AI agents. Founder of GBS Tecnologia.',
-    url: 'https://gbstec.dev.br',
+    title: TITLE,
+    description: SHORT,
+    url: SITE_URL,
     siteName: 'gbstec.dev.br',
     type: 'website',
   },
+  twitter: { card: 'summary_large_image', title: TITLE, description: SHORT },
 };
 
 export const viewport: Viewport = { themeColor: '#101114' };

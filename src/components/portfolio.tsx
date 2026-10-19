@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
 import { COPY, LINKS, SKILLS } from '@/content/portfolio';
@@ -11,6 +12,11 @@ const EASE = 'cubic-bezier(.2,.7,.1,1)';
 const ROTATE_MS = 2600;
 const COPIED_MS = 1800;
 const SKILLS_LOOP = [...SKILLS, ...SKILLS];
+const INTRO_FADE: Keyframe[] = [
+  { opacity: 0, transform: 'translateY(32px)', filter: 'blur(6px)' },
+  { opacity: 1, transform: 'none', filter: 'blur(0)' },
+];
+const INTRO_SLIDE: Keyframe[] = [{ transform: 'translateY(32px)' }, { transform: 'none' }];
 
 function reducedMotion() {
   return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -69,12 +75,11 @@ export function Portfolio() {
     if (!root || !hero || reducedMotion()) return;
 
     const anims: Animation[] = [];
-    root.querySelectorAll('[data-intro]').forEach((el, i) =>
+    root.querySelectorAll<HTMLElement>('[data-intro]').forEach((el, i) =>
       anims.push(
-        el.animate(
-          [{ opacity: 0, transform: 'translateY(32px)', filter: 'blur(6px)' }, { opacity: 1, transform: 'none', filter: 'blur(0)' }],
-          { duration: 1000, delay: 100 + i * 110, easing: EASE, fill: 'backwards' },
-        ),
+        el.animate(el.dataset.intro === 'slide' ? INTRO_SLIDE : INTRO_FADE, {
+          duration: 1000, delay: 100 + i * 110, easing: EASE, fill: 'backwards',
+        }),
       ),
     );
     const loops: [Element | null, Keyframe[], KeyframeAnimationOptions][] = [
@@ -138,7 +143,7 @@ export function Portfolio() {
     <div ref={rootRef} className={s.root}>
       <nav className={s.nav}>
         <div className={s.navInner}>
-          <a href="#top" className={s.brand}>
+          <a href="#top" className={s.brand} aria-label="Gabriel Sandim, back to top">
             <svg viewBox="0 0 100 100" className={s.mark} aria-hidden="true">
               <path d="M50 14 A36 36 0 1 0 86 50" fill="none" stroke="#F3F2EE" strokeWidth="16" />
               <rect x="50" y="42" width="44" height="16" fill="#F3F2EE" />
@@ -174,7 +179,7 @@ export function Portfolio() {
             </span>
           </h1>
           <div className={s.heroBottom}>
-            <div data-intro="1" className={s.heroCopy}>
+            <div data-intro="slide" className={s.heroCopy}>
               <p className={s.role}>
                 {t.role_prefix}{' '}
                 <span className={s.wordClip}>
@@ -326,7 +331,7 @@ export function Portfolio() {
           <div className={s.obraBody}>
             <div className={s.obraTop}>
               <div className={s.obraHead}>
-                <img src="/assets/obranova-logo.png" alt="Obra Nova" width={60} height={60} className={s.obraLogo} />
+                <Image src="/assets/obranova-logo.png" alt="Obra Nova" width={60} height={60} className={s.obraLogo} />
                 <div>
                   <div className={s.obraName}>Obra Nova</div>
                   <div className={s.obraTag}>{t.obra_tag}</div>
@@ -365,10 +370,10 @@ export function Portfolio() {
                 <span className={s.dotYellow} />
                 <span className={s.dotGreen} />
               </div>
-              <img src="/assets/obranova-financeiro.webp" alt="Obra Nova: Financeiro" width={1600} height={1000} className={s.shotImg} />
+              <Image src="/assets/obranova-financeiro.webp" alt="Obra Nova: Financeiro" width={1600} height={1000} sizes="(max-width: 900px) 92vw, 640px" className={s.shotImg} />
             </div>
             <div ref={shotBRef} className={s.shotB}>
-              <img src="/assets/obranova-cronograma.webp" alt="Obra Nova: Planejado vs Realizado" width={1600} height={700} className={s.shotImg} />
+              <Image src="/assets/obranova-cronograma.webp" alt="Obra Nova: Planejado vs Realizado" width={1600} height={700} sizes="(max-width: 900px) 70vw, 420px" className={s.shotImg} />
             </div>
           </div>
         </article>
@@ -377,7 +382,7 @@ export function Portfolio() {
           {t.products.map((p) => (
             <a key={p.name} data-reveal="1" href={p.url} target="_blank" rel="noreferrer" className={s.product}>
               <div className={s.productTop}>
-                <img src={p.icon} alt={p.name} width={48} height={48} className={s.productIcon} />
+                <Image src={p.icon} alt={p.name} width={48} height={48} className={s.productIcon} />
                 <span className={s.productBadge}>{p.badge}</span>
               </div>
               <div>
@@ -399,7 +404,7 @@ export function Portfolio() {
           <div data-reveal="1" className={s.aboutSide}>
             <div className={s.eyebrow}>04 / {t.sec_about}</div>
             <div className={s.portrait}>
-              <img src="/assets/gabriel.jpg" alt="Gabriel Sandim" width={400} height={400} className={s.portraitImg} />
+              <Image src="/assets/gabriel.jpg" alt="Gabriel Sandim" width={400} height={400} sizes="(max-width: 900px) 92vw, 360px" className={s.portraitImg} />
               <div className={s.portraitTag}>São Paulo · GMT-3</div>
             </div>
           </div>

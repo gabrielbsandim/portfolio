@@ -47,7 +47,7 @@ export type Copy = {
 export const COPY: Record<Lang, Copy> = {
   en: {
     nav_ai: 'AI', nav_studio: 'GBS', nav_exp: 'Career', nav_about: 'About', nav_contact: 'Contact',
-    kicker: 'Frontend Engineer · AI-native · São Paulo, GMT-3',
+    kicker: 'Product Engineer · Frontend & AI · São Paulo, GMT-3',
     role_prefix: 'Frontend engineer building',
     words: ['AI-powered workflows.', 'scalable interfaces.', 'micro frontends.', 'my own products.'],
     hero_sub: '6+ years shipping React and React Native products used by thousands of people in 5 countries and, lately, the AI agents and workflows that let teams ship them faster. Founder of GBS Tecnologia, the company behind Obra Nova and Lifedeck.',
@@ -121,7 +121,7 @@ export const COPY: Record<Lang, Copy> = {
   },
   pt: {
     nav_ai: 'IA', nav_studio: 'GBS', nav_exp: 'Carreira', nav_about: 'Sobre', nav_contact: 'Contato',
-    kicker: 'Engenheiro Frontend · AI-native · São Paulo, GMT-3',
+    kicker: 'Product Engineer · Frontend e IA · São Paulo, GMT-3',
     role_prefix: 'Engenheiro frontend construindo',
     words: ['fluxos com IA.', 'interfaces escaláveis.', 'micro frontends.', 'meus próprios produtos.'],
     hero_sub: '6+ anos entregando produtos React e React Native usados por milhares de pessoas em 5 países e, mais recentemente, os agentes e fluxos com IA que fazem times entregarem mais rápido. Fundador da GBS Tecnologia, a empresa por trás do Obra Nova e do Lifedeck.',
