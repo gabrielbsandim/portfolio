@@ -3,6 +3,9 @@ export type Lang = 'en' | 'pt';
 export const LINKS = {
   obra: 'https://www.obranova.com.br',
   obraPrivacy: 'https://www.obranova.com.br/politica-de-privacidade',
+  kapi: 'https://kapiapp.com.br',
+  kapiPlay: 'https://play.google.com/store/apps/details?id=com.gbs.kapi',
+  kapiPrivacy: 'https://kapiapp.com.br/privacy',
   life: 'https://www.lifedeck.com.br',
   cash: 'https://github.com/gabrielbsandim/cashdeck',
   kit: 'https://github.com/gabrielbsandim/task-funnel',
@@ -25,6 +28,7 @@ type AiItem = { k: string; title: string; desc: string; tags: string };
 type Principle = { h: string; d: string };
 type Fact = { label: string; title: string; meta: string };
 type CompanyFact = { k: string; v: string };
+type Shot = { src: string; alt: string };
 type Product = { icon: string; name: string; tag: string; badge: string; url: string; cta: string; desc: string; stack: string };
 type JobItem = { g?: string; h: string; d: string };
 type Job = { period: string; company: string; role: string; stack: string[]; items: JobItem[] };
@@ -37,6 +41,7 @@ export type Copy = {
   ai_principles_label: string; ai_principles: Principle[]; ai_proof: string; ai_proof_cta: string;
   sec_studio: string; studio_title: string; studio_desc: string; company_facts: CompanyFact[];
   obra_tag: string; obra_desc: string; obra_points: string[]; obra_status: string; obra_app: string;
+  kapi_tag: string; kapi_desc: string; kapi_points: string[]; kapi_status: string; kapi_stack: string; kapi_store: string; kapi_shots: Shot[];
   visit: string; privacy: string; products: Product[];
   sec_exp: string; exp_title: string; jobs: Job[];
   sec_about: string; about_title: string; about_p1: string; about_p2: string; facts: Fact[];
@@ -50,7 +55,7 @@ export const COPY: Record<Lang, Copy> = {
     kicker: 'Product Engineer · Frontend & AI · São Paulo, GMT-3',
     role_prefix: 'Frontend engineer building',
     words: ['AI-powered workflows.', 'scalable interfaces.', 'micro frontends.', 'my own products.'],
-    hero_sub: '6+ years shipping React and React Native products used by thousands of people in 5 countries and, lately, the AI agents and workflows that let teams ship them faster. Founder of GBS Tecnologia, the company behind Obra Nova and Lifedeck.',
+    hero_sub: '6+ years shipping React and React Native products used by thousands of people in 5 countries and, lately, the AI agents and workflows that let teams ship them faster. Founder of GBS Tecnologia, the company behind Obra Nova, Kapi and Lifedeck.',
     glance: ['Remote · GMT-3', 'English · professional', 'React · TypeScript · AI agents'],
     cta_work: 'See recent work', cta_cv: 'Résumé',
     stats: [
@@ -76,12 +81,21 @@ export const COPY: Record<Lang, Copy> = {
     ai_proof: 'Public proof: task-funnel, my open-source Claude Code plugin that turns one task into a reviewed pull request.',
     ai_proof_cta: 'See it on GitHub',
     sec_studio: 'GBS Tecnologia', studio_title: 'A software company where I build, ship and run my own products.',
-    studio_desc: 'GBS Tecnologia da Informação is the independent company I founded to take products from idea to production and keep them running: design, code, infrastructure, pricing and support. It owns Obra Nova and Lifedeck, and publishes open-source tools.',
+    studio_desc: 'GBS Tecnologia da Informação is the independent company I founded to take products from idea to production and keep them running: design, code, infrastructure, pricing and support. It owns Obra Nova, Kapi and Lifedeck, and publishes open-source tools.',
     company_facts: [{ k: 'Legal name', v: 'GBS Tecnologia da Informação Ltda' }, { k: 'CNPJ', v: '44.000.992/0001-22' }, { k: 'Based in', v: 'São Paulo, Brazil' }],
     obra_tag: 'Flagship · SaaS for construction',
     obra_desc: 'Management platform for small and mid-sized construction companies. Projects, crews, documents and finances in one dashboard. It flags budget overruns early and puts an AI assistant on WhatsApp that files daily site reports by voice.',
     obra_points: ['AI assistant on WhatsApp, reports by voice', 'Planned vs. actual cost, per stage', 'P&L updated on every entry'],
     obra_status: 'Live, paying plans', obra_app: 'Native app coming to Google Play', visit: 'Visit site', privacy: 'Privacy policy',
+    kapi_tag: 'New · Gamified fitness app',
+    kapi_desc: 'A workout app that plays like a game. Guided 7 to 25 minute sessions, XP for every minute, ten belts to climb and a new league every week with people at your level. Workouts from your watch count too, and on Kapi Pro every belt you earn ships as a physical bracelet.',
+    kapi_points: ['Guided workouts, 7 to 25 minutes', 'Belts, streaks and a weekly league of 30', 'From first commit to Google Play in under a week'],
+    kapi_status: 'Live on Google Play', kapi_stack: 'Flutter · Next.js · Postgres', kapi_store: 'Get it on Google Play',
+    kapi_shots: [
+      { src: '/assets/kapi-league-en.webp', alt: 'Kapi: weekly league' },
+      { src: '/assets/kapi-home-en.webp', alt: 'Kapi: today, with the daily ring and XP' },
+      { src: '/assets/kapi-finish-en.webp', alt: 'Kapi: workout complete, XP earned' },
+    ],
     products: [
       { icon: '/assets/lifedeck-icon.png', name: 'Lifedeck', tag: 'Productivity · WhatsApp', badge: 'Live', url: LINKS.life, cta: 'lifedeck.com.br', desc: 'Your whole life, calmly in hand. Tasks and events with reminders on WhatsApp, and you can add new ones just by sending a message.', stack: 'WhatsApp integration' },
       { icon: '/assets/cashdeck-icon.png', name: 'Cashdeck', tag: 'Open source · Finance + AI', badge: 'MIT', url: LINKS.cash, cta: 'GitHub', desc: 'Self-hosted household finance for Brazil, personal and small company: Open Finance sync, bill capture, a safe payment ladder and an AI chat with tools over your data.', stack: 'TypeScript · Next.js · Postgres · Flutter' },
@@ -124,7 +138,7 @@ export const COPY: Record<Lang, Copy> = {
     kicker: 'Product Engineer · Frontend e IA · São Paulo, GMT-3',
     role_prefix: 'Engenheiro frontend construindo',
     words: ['fluxos com IA.', 'interfaces escaláveis.', 'micro frontends.', 'meus próprios produtos.'],
-    hero_sub: '6+ anos entregando produtos React e React Native usados por milhares de pessoas em 5 países e, mais recentemente, os agentes e fluxos com IA que fazem times entregarem mais rápido. Fundador da GBS Tecnologia, a empresa por trás do Obra Nova e do Lifedeck.',
+    hero_sub: '6+ anos entregando produtos React e React Native usados por milhares de pessoas em 5 países e, mais recentemente, os agentes e fluxos com IA que fazem times entregarem mais rápido. Fundador da GBS Tecnologia, a empresa por trás do Obra Nova, do Kapi e do Lifedeck.',
     glance: ['Remoto · GMT-3', 'Inglês · profissional', 'React · TypeScript · Agentes de IA'],
     cta_work: 'Ver trabalho recente', cta_cv: 'Currículo',
     stats: [
@@ -150,12 +164,21 @@ export const COPY: Record<Lang, Copy> = {
     ai_proof: 'Prova pública: task-funnel, meu plugin open source para o Claude Code que transforma uma tarefa em um pull request revisado.',
     ai_proof_cta: 'Ver no GitHub',
     sec_studio: 'GBS Tecnologia', studio_title: 'Uma empresa de software onde eu crio, publico e opero meus próprios produtos.',
-    studio_desc: 'A GBS Tecnologia da Informação é a empresa independente que fundei para levar produtos da ideia à produção e mantê-los rodando: design, código, infraestrutura, preço e suporte. É dona do Obra Nova e do Lifedeck, e publica ferramentas open source.',
+    studio_desc: 'A GBS Tecnologia da Informação é a empresa independente que fundei para levar produtos da ideia à produção e mantê-los rodando: design, código, infraestrutura, preço e suporte. É dona do Obra Nova, do Kapi e do Lifedeck, e publica ferramentas open source.',
     company_facts: [{ k: 'Razão social', v: 'GBS Tecnologia da Informação Ltda' }, { k: 'CNPJ', v: '44.000.992/0001-22' }, { k: 'Sede', v: 'São Paulo, Brasil' }],
     obra_tag: 'Carro-chefe · SaaS para construtoras',
     obra_desc: 'Plataforma de gestão para construtoras de pequeno e médio porte. Obras, equipes, documentos e financeiro num painel só. Antecipa estouros de orçamento e coloca um assistente com IA no WhatsApp que preenche o diário de obra por voz.',
     obra_points: ['Assistente com IA no WhatsApp, RDO por voz', 'Planejado vs. realizado por etapa', 'DRE atualizado a cada lançamento'],
     obra_status: 'No ar, com planos pagos', obra_app: 'App nativo em breve no Google Play', visit: 'Visitar site', privacy: 'Política de privacidade',
+    kapi_tag: 'Novo · App de treino gamificado',
+    kapi_desc: 'Um app de treino que funciona como jogo. Sessões guiadas de 7 a 25 minutos, XP a cada minuto, dez faixas para subir e uma liga nova toda semana com gente do seu nível. Treino do relógio também conta, e no Kapi Pro cada faixa conquistada vira uma pulseira física.',
+    kapi_points: ['Treinos guiados de 7 a 25 minutos', 'Faixas, sequência e liga semanal de 30', 'Do primeiro commit ao Google Play em menos de uma semana'],
+    kapi_status: 'No ar no Google Play', kapi_stack: 'Flutter · Next.js · Postgres', kapi_store: 'Baixar no Google Play',
+    kapi_shots: [
+      { src: '/assets/kapi-league-pt.webp', alt: 'Kapi: liga da semana' },
+      { src: '/assets/kapi-home-pt.webp', alt: 'Kapi: hoje, com o anel do dia e o XP' },
+      { src: '/assets/kapi-finish-pt.webp', alt: 'Kapi: treino concluído, XP ganho' },
+    ],
     products: [
       { icon: '/assets/lifedeck-icon.png', name: 'Lifedeck', tag: 'Produtividade · WhatsApp', badge: 'No ar', url: LINKS.life, cta: 'lifedeck.com.br', desc: 'Sua vida inteira, com calma, na mão. Tarefas e eventos com lembretes no WhatsApp, e dá para adicionar novos só mandando uma mensagem.', stack: 'Integração com WhatsApp' },
       { icon: '/assets/cashdeck-icon.png', name: 'Cashdeck', tag: 'Open source · Finanças + IA', badge: 'MIT', url: LINKS.cash, cta: 'GitHub', desc: 'Finanças domésticas self-hosted para o Brasil, PF e PJ: Open Finance, captura de boletos, pagamentos com camadas de segurança e um chat com IA e ferramentas sobre seus dados.', stack: 'TypeScript · Next.js · Postgres · Flutter' },

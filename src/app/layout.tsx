@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: TITLE,
   description:
-    'Product engineer building AI-powered workflows, agents, scalable interfaces and micro frontends. Founder of GBS Tecnologia, the company behind Obra Nova and Lifedeck.',
+    'Product engineer building AI-powered workflows, agents, scalable interfaces and micro frontends. Founder of GBS Tecnologia, the company behind Obra Nova, Kapi and Lifedeck.',
   alternates: { canonical: '/' },
   openGraph: {
     title: TITLE,

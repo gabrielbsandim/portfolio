@@ -47,6 +47,7 @@ export function Portfolio() {
   const cursorRef = useRef<SVGRectElement>(null);
   const shotARef = useRef<HTMLDivElement>(null);
   const shotBRef = useRef<HTMLDivElement>(null);
+  const phoneRef = useRef<HTMLDivElement>(null);
   const mounted = useRef(false);
 
   useEffect(() => {
@@ -87,6 +88,7 @@ export function Portfolio() {
       [marqueeRef.current, [{ transform: 'translateX(0)' }, { transform: 'translateX(-50%)' }], { duration: 42000, iterations: Infinity }],
       [shotARef.current, [{ transform: 'translateY(0)' }, { transform: 'translateY(-12px)' }, { transform: 'translateY(0)' }], { duration: 7000, iterations: Infinity, easing: 'ease-in-out' }],
       [shotBRef.current, [{ transform: 'translateY(0)' }, { transform: 'translateY(-12px)' }, { transform: 'translateY(0)' }], { duration: 7000, delay: 1200, iterations: Infinity, easing: 'ease-in-out' }],
+      [phoneRef.current, [{ transform: 'translateY(0)' }, { transform: 'translateY(-12px)' }, { transform: 'translateY(0)' }], { duration: 7000, delay: 600, iterations: Infinity, easing: 'ease-in-out' }],
     ];
     loops.forEach(([el, frames, opts]) => el && anims.push(el.animate(frames, opts)));
 
@@ -327,38 +329,38 @@ export function Portfolio() {
           </div>
         </div>
 
-        <article data-reveal="1" className={s.obra}>
-          <div className={s.obraBody}>
-            <div className={s.obraTop}>
-              <div className={s.obraHead}>
-                <Image src="/assets/obranova-logo.png" alt="Obra Nova" width={60} height={60} className={s.obraLogo} />
+        <article data-reveal="1" className={s.feature}>
+          <div className={s.featureBody}>
+            <div className={s.featureTop}>
+              <div className={s.featureHead}>
+                <Image src="/assets/obranova-logo.png" alt="Obra Nova" width={60} height={60} className={s.featureLogo} />
                 <div>
-                  <div className={s.obraName}>Obra Nova</div>
-                  <div className={s.obraTag}>{t.obra_tag}</div>
+                  <div className={s.featureName}>Obra Nova</div>
+                  <div className={s.featureTag}>{t.obra_tag}</div>
                 </div>
               </div>
-              <div className={s.obraBadges}>
+              <div className={s.featureBadges}>
                 <span className={s.liveBadge}>
                   <span className={s.liveDot} />
                   {t.obra_status}
                 </span>
                 <span className={s.outlineBadge}>{t.obra_app}</span>
               </div>
-              <p className={s.obraDesc}>{t.obra_desc}</p>
-              <div className={s.obraPoints}>
+              <p className={s.featureDesc}>{t.obra_desc}</p>
+              <div className={s.featurePoints}>
                 {t.obra_points.map((op) => (
-                  <div key={op} className={s.obraPoint}>
+                  <div key={op} className={s.featurePoint}>
                     <span className={s.diamondSmall} />
                     {op}
                   </div>
                 ))}
               </div>
             </div>
-            <div className={s.obraLinks}>
-              <a href={LINKS.obra} target="_blank" rel="noreferrer" className={s.obraVisit}>
+            <div className={s.featureLinks}>
+              <a href={LINKS.obra} target="_blank" rel="noreferrer" className={s.featureCta}>
                 {t.visit} <span className={s.mono}>↗</span>
               </a>
-              <a href={LINKS.obraPrivacy} target="_blank" rel="noreferrer" className={s.obraPrivacy}>
+              <a href={LINKS.obraPrivacy} target="_blank" rel="noreferrer" className={s.featureLink}>
                 {t.privacy}
               </a>
             </div>
@@ -375,6 +377,54 @@ export function Portfolio() {
             <div ref={shotBRef} className={s.shotB}>
               <Image src="/assets/obranova-cronograma.webp" alt="Obra Nova: Planejado vs Realizado" width={1600} height={700} sizes="(max-width: 900px) 70vw, 420px" className={s.shotImg} />
             </div>
+          </div>
+        </article>
+
+        <article data-reveal="1" className={`${s.feature} ${s.featureReverse}`}>
+          <div className={s.featureBody}>
+            <div className={s.featureTop}>
+              <div className={s.featureHead}>
+                <Image src="/assets/kapi-icon.png" alt="Kapi" width={60} height={60} className={`${s.featureLogo} ${s.kapiLogo}`} />
+                <div>
+                  <div className={s.featureName}>Kapi</div>
+                  <div className={s.featureTag}>{t.kapi_tag}</div>
+                </div>
+              </div>
+              <div className={s.featureBadges}>
+                <span className={s.liveBadge}>
+                  <span className={s.liveDot} />
+                  {t.kapi_status}
+                </span>
+                <span className={s.outlineBadge}>{t.kapi_stack}</span>
+              </div>
+              <p className={s.featureDesc}>{t.kapi_desc}</p>
+              <div className={s.featurePoints}>
+                {t.kapi_points.map((kp) => (
+                  <div key={kp} className={s.featurePoint}>
+                    <span className={s.diamondSmall} />
+                    {kp}
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className={s.featureLinks}>
+              <a href={LINKS.kapiPlay} target="_blank" rel="noreferrer" className={s.featureCta}>
+                {t.kapi_store} <span className={s.mono}>↗</span>
+              </a>
+              <a href={LINKS.kapi} target="_blank" rel="noreferrer" className={s.featureLink}>
+                kapiapp.com.br
+              </a>
+              <a href={LINKS.kapiPrivacy} target="_blank" rel="noreferrer" className={s.featureLink}>
+                {t.privacy}
+              </a>
+            </div>
+          </div>
+          <div className={s.kapiShots}>
+            {t.kapi_shots.map((ks, i) => (
+              <div key={ks.src} ref={i === 1 ? phoneRef : undefined} className={s.phone}>
+                <Image src={ks.src} alt={ks.alt} width={480} height={1013} sizes="(max-width: 900px) 40vw, 240px" className={s.shotImg} />
+              </div>
+            ))}
           </div>
         </article>
 

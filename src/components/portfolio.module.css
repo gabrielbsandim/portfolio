@@ -715,7 +715,7 @@
   color: #e4e5e9;
 }
 
-.obra {
+.feature {
   margin-top: 56px;
   border-radius: 28px;
   background: #17181c;
@@ -725,7 +725,7 @@
   flex-wrap: wrap;
 }
 
-.obraBody {
+.featureBody {
   flex: 1 1 400px;
   min-width: 0;
   padding: clamp(28px, 4.5vw, 56px);
@@ -735,19 +735,19 @@
   justify-content: space-between;
 }
 
-.obraTop {
+.featureTop {
   display: flex;
   flex-direction: column;
   gap: 22px;
 }
 
-.obraHead {
+.featureHead {
   display: flex;
   align-items: center;
   gap: 16px;
 }
 
-.obraLogo {
+.featureLogo {
   width: 60px;
   height: 60px;
   border-radius: 16px;
@@ -756,20 +756,20 @@
   object-fit: contain;
 }
 
-.obraName {
+.featureName {
   font-size: 30px;
   font-weight: 600;
   letter-spacing: -0.03em;
 }
 
-.obraTag {
+.featureTag {
   font-family: var(--font-mono), monospace;
   font-size: 12px;
   color: #9a9ca5;
   margin-top: 2px;
 }
 
-.obraBadges {
+.featureBadges {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
@@ -803,7 +803,7 @@
   color: #c9cad0;
 }
 
-.obraDesc {
+.featureDesc {
   margin: 0;
   font-size: 17px;
   line-height: 1.65;
@@ -812,13 +812,13 @@
   text-wrap: pretty;
 }
 
-.obraPoints {
+.featurePoints {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-.obraPoint {
+.featurePoint {
   display: flex;
   align-items: center;
   gap: 12px;
@@ -834,13 +834,13 @@
   flex: none;
 }
 
-.obraLinks {
+.featureLinks {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
 }
 
-.obraVisit {
+.featureCta {
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -853,12 +853,12 @@
   transition: transform 0.2s;
 }
 
-.obraVisit:hover {
+.featureCta:hover {
   color: #111;
   transform: translateY(-2px);
 }
 
-.obraPrivacy {
+.featureLink {
   display: inline-flex;
   align-items: center;
   padding: 13px 18px;
@@ -868,7 +868,7 @@
   color: #c9cad0;
 }
 
-.obraPrivacy:hover {
+.featureLink:hover {
   border-color: var(--acc);
 }
 
@@ -936,6 +936,58 @@
   display: block;
   width: 100%;
   height: auto;
+}
+
+.feature + .feature {
+  margin-top: 20px;
+}
+
+.featureReverse {
+  flex-direction: row-reverse;
+}
+
+.kapiLogo {
+  padding: 0;
+  background: none;
+}
+
+.kapiShots {
+  flex: 1.3 1 460px;
+  min-width: 0;
+  position: relative;
+  min-height: clamp(310px, 52vw, 520px);
+  background: radial-gradient(circle at 50% 35%, color-mix(in oklch, #ff6b2c 30%, #17181c), #17181c 70%);
+  overflow: hidden;
+}
+
+.phone {
+  position: absolute;
+  top: 16%;
+  width: min(30%, 200px);
+  border-radius: 24px;
+  overflow: hidden;
+  border: 5px solid #0b0c0e;
+  background: #0b0c0e;
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.6);
+}
+
+.phone:nth-child(1) {
+  left: 6%;
+  rotate: -7deg;
+}
+
+.phone:nth-child(2) {
+  top: 8%;
+  left: 50%;
+  translate: -50% 0;
+  width: min(36%, 240px);
+  z-index: 1;
+  box-shadow: 0 40px 90px rgba(0, 0, 0, 0.55);
+}
+
+.phone:nth-child(3) {
+  right: 6%;
+  rotate: 7deg;
 }
 
 .products {

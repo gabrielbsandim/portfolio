@@ -129,6 +129,11 @@ export function Resume() {
               site reports by voice. Next.js, PostgreSQL, Vercel, Sentry, React Native.
             </li>
             <li>
+              <strong>Kapi</strong> (kapiapp.com.br): gamified workout app live on Google Play. Guided workouts, XP,
+              belts and weekly leagues, watch import through Health Connect and in-app subscriptions. Flutter, Next.js,
+              PostgreSQL; first commit to store listing in under a week.
+            </li>
+            <li>
               <strong>Lifedeck</strong> (lifedeck.com.br): task and event manager with WhatsApp reminders and task
               creation by message.
             </li>
