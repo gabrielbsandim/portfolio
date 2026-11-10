@@ -131,7 +131,7 @@ export function Resume() {
             <li>
               <strong>Obra Nova</strong> (obranova.com.br): SaaS for small and mid-sized construction companies with
               paid plans, on the web, App Store and Google Play. Projects, finances and P&amp;L per project, plus an AI
-              assistant on WhatsApp with 39 tools that files daily site reports by voice; replies in 3.3 s (p50) and 6.4 s (p95)
+              assistant on WhatsApp with 40 tools that files daily site reports by voice; replies in 3.3 s (p50) and 6.4 s (p95)
               at under one US cent each, traced in Langfuse. Next.js, PostgreSQL, Vercel, Sentry, Flutter.
             </li>
             <li>

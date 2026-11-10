@@ -361,6 +361,9 @@ export function Portfolio() {
               <a href={LINKS.obra} target="_blank" rel="noreferrer" className={s.featureCta}>
                 {t.visit} <span className={s.mono}>↗</span>
               </a>
+              <Link href={LINKS.obraCase} className={s.featureLink}>
+                {t.obra_case}
+              </Link>
               <a href={LINKS.obraIos} target="_blank" rel="noreferrer" className={s.featureLink}>
                 {t.obra_ios}
               </a>

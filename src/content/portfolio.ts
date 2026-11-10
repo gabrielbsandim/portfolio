@@ -18,6 +18,7 @@ export const LINKS = {
   brand: '/brand',
   email: 'gabriel@gbstec.dev.br',
   privacy: '/privacy',
+  obraCase: '/cases/obra-nova',
 } as const;
 
 export const SKILLS = [
@@ -42,7 +43,7 @@ export type Copy = {
   sec_ai: string; ai_title: string; ai_desc: string; ai_items: AiItem[];
   ai_principles_label: string; ai_principles: Principle[]; ai_proof: string; ai_proof_cta: string;
   sec_studio: string; studio_title: string; studio_desc: string; company_facts: CompanyFact[];
-  obra_tag: string; obra_desc: string; obra_points: string[]; obra_status: string; obra_app: string; obra_ios: string; obra_play: string;
+  obra_tag: string; obra_desc: string; obra_points: string[]; obra_status: string; obra_app: string; obra_ios: string; obra_play: string; obra_case: string;
   kapi_tag: string; kapi_desc: string; kapi_points: string[]; kapi_status: string; kapi_stack: string; kapi_store: string; kapi_shots: Shot[];
   visit: string; privacy: string; products: Product[];
   sec_exp: string; exp_title: string; jobs: Job[];
@@ -88,8 +89,8 @@ export const COPY: Record<Lang, Copy> = {
     company_facts: [{ k: 'Legal name', v: 'GBS Tecnologia da Informação Ltda' }, { k: 'CNPJ', v: '44.000.992/0001-22' }, { k: 'Based in', v: 'São Paulo, Brazil' }],
     obra_tag: 'Flagship · SaaS for construction',
     obra_desc: 'Management platform for small and mid-sized construction companies. Projects, crews, documents and finances in one dashboard. It flags budget overruns early and puts an AI assistant on WhatsApp that files daily site reports by voice.',
-    obra_points: ['AI assistant on WhatsApp: 39 tools, replies in 6.4 s at p95', 'Planned vs. actual cost, per stage', 'Native app on iOS and Android'],
-    obra_status: 'Live, paying plans', obra_app: 'App Store · Google Play', obra_ios: 'App Store', obra_play: 'Google Play', visit: 'Visit site', privacy: 'Privacy policy',
+    obra_points: ['AI assistant on WhatsApp: 40 tools, replies in 6.4 s at p95', 'Planned vs. actual cost, per stage', 'Native app on iOS and Android'],
+    obra_status: 'Live, paying plans', obra_app: 'App Store · Google Play', obra_ios: 'App Store', obra_play: 'Google Play', obra_case: 'Case study', visit: 'Visit site', privacy: 'Privacy policy',
     kapi_tag: 'New · Gamified fitness app',
     kapi_desc: 'A workout app that plays like a game. Guided 7 to 25 minute sessions with no equipment, XP for every minute, a daily mission and a streak that respects your rest days. Weekly rankings among the people you follow, in Brazil and in your city, and workouts from your watch count too.',
     kapi_points: ['Guided workouts, 7 to 25 minutes', 'XP, daily missions and streaks', 'From first commit to Google Play in under a week'],
@@ -174,8 +175,8 @@ export const COPY: Record<Lang, Copy> = {
     company_facts: [{ k: 'Razão social', v: 'GBS Tecnologia da Informação Ltda' }, { k: 'CNPJ', v: '44.000.992/0001-22' }, { k: 'Sede', v: 'São Paulo, Brasil' }],
     obra_tag: 'Carro-chefe · SaaS para construtoras',
     obra_desc: 'Plataforma de gestão para construtoras de pequeno e médio porte. Obras, equipes, documentos e financeiro num painel só. Antecipa estouros de orçamento e coloca um assistente com IA no WhatsApp que preenche o diário de obra por voz.',
-    obra_points: ['Assistente com IA no WhatsApp: 39 tools, responde em 6,4 s no p95', 'Planejado vs. realizado por etapa', 'App nativo no iOS e no Android'],
-    obra_status: 'No ar, com planos pagos', obra_app: 'App Store · Google Play', obra_ios: 'App Store', obra_play: 'Google Play', visit: 'Visitar site', privacy: 'Política de privacidade',
+    obra_points: ['Assistente com IA no WhatsApp: 40 tools, responde em 6,4 s no p95', 'Planejado vs. realizado por etapa', 'App nativo no iOS e no Android'],
+    obra_status: 'No ar, com planos pagos', obra_app: 'App Store · Google Play', obra_ios: 'App Store', obra_play: 'Google Play', obra_case: 'Estudo de caso', visit: 'Visitar site', privacy: 'Política de privacidade',
     kapi_tag: 'Novo · App de treino gamificado',
     kapi_desc: 'Um app de treino que funciona como jogo. Sessões guiadas de 7 a 25 minutos, sem equipamento, XP a cada minuto, uma missão por dia e uma sequência que respeita seus dias de descanso. Rankings semanais entre quem você segue, no Brasil e na sua cidade, e treino do relógio também conta.',
     kapi_points: ['Treinos guiados de 7 a 25 minutos', 'XP, missões diárias e sequência', 'Do primeiro commit ao Google Play em menos de uma semana'],
