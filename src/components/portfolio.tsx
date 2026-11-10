@@ -3,7 +3,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
-import { CASES } from '@/content/cases';
 import { COPY, LINKS, SKILLS } from '@/content/portfolio';
 import { LangToggle } from './lang-toggle';
 import { useLang } from './use-lang';
@@ -159,7 +158,7 @@ export function Portfolio() {
           </a>
           <div className={s.navLinks}>
             <a href="#ai" className={s.navLink}>{t.nav_ai}</a>
-            <a href="#cases" className={s.navLink}>{t.nav_cases}</a>
+            <Link href={LINKS.cases} className={s.navLink}>{t.nav_cases}</Link>
             <a href="#experience" className={s.navLink}>{t.nav_exp}</a>
             <a href="#studio" className={s.navLink}>{t.nav_studio}</a>
             <a href="#about" className={s.navLink}>{t.nav_about}</a>
@@ -265,54 +264,13 @@ export function Portfolio() {
               ))}
             </div>
           </div>
-          <a href={LINKS.kit} target="_blank" rel="noreferrer" className={s.proof}>
+          <Link href={LINKS.funnelCase} className={s.proof}>
             <div className={s.proofHead}>
               <img src="/assets/task-funnel-icon.svg" alt="task-funnel" width={40} height={40} className={s.proofIcon} />
               <span className={s.proofRepo}>gabrielbsandim/task-funnel</span>
             </div>
             <p className={s.proofText}>{t.ai_proof}</p>
-            <span className={s.proofCta}>{t.ai_proof_cta} ↗</span>
-          </a>
-        </div>
-      </section>
-
-      <section id="cases" className={s.section}>
-        <div data-reveal="1" className={s.sectionHead}>
-          <div className={s.sectionHeadMain}>
-            <div className={s.eyebrow}>02 / {t.sec_cases}</div>
-            <h2 className={s.h2}>{t.cases_title}</h2>
-          </div>
-          <p className={s.sectionDesc}>{t.cases_desc}</p>
-        </div>
-        <div className={s.casesGrid}>
-          {CASES.map((entry) => {
-            const cc = entry.copy[lang];
-            const lead = cc.stats[0];
-            return (
-              <Link key={entry.slug} data-reveal="1" href={`/cases/${entry.slug}`} className={s.product}>
-                <div className={s.productTop}>
-                  <Image src={entry.icon} alt={entry.name} width={48} height={48} className={`${s.productIcon} ${entry.plate ? s.iconPlate : ''}`} />
-                  <span className={s.productBadge}>{entry.name}</span>
-                </div>
-                <div>
-                  <div className={s.productTag}>{cc.tag}</div>
-                  <div className={s.caseTitle}>{cc.title}</div>
-                </div>
-                <div className={s.caseStat}>
-                  <span className={s.caseStatValue}>{lead.v}</span>
-                  <span className={s.caseStatLabel}>{lead.label}</span>
-                </div>
-                <div className={s.productFoot}>
-                  <span>{cc.meta[1]}</span>
-                  <span className={s.accent}>{t.cases_read} →</span>
-                </div>
-              </Link>
-            );
-          })}
-        </div>
-        <div data-reveal="1" className={s.casesMore}>
-          <Link href={LINKS.cases} className={s.ctaGhost}>
-            {t.cases_all} <span className={s.mono}>→</span>
+            <span className={s.proofCta}>{t.ai_proof_cta} →</span>
           </Link>
         </div>
       </section>
@@ -320,7 +278,7 @@ export function Portfolio() {
       <section id="experience" className={s.bordered}>
         <div className={s.sectionInner}>
           <div data-reveal="1">
-            <div className={s.eyebrow}>03 / {t.sec_exp}</div>
+            <div className={s.eyebrow}>02 / {t.sec_exp}</div>
             <h2 className={`${s.h2} ${s.h2Narrow}`}>{t.exp_title}</h2>
           </div>
           <div className={s.jobs}>
@@ -359,7 +317,7 @@ export function Portfolio() {
       <section id="studio" className={`${s.section} ${s.studio}`}>
         <div data-reveal="1" className={s.sectionHead}>
           <div className={s.studioHeadMain}>
-            <div className={s.eyebrow}>04 / {t.sec_studio}</div>
+            <div className={s.eyebrow}>03 / {t.sec_studio}</div>
             <h2 className={s.h2}>{t.studio_title}</h2>
             <p className={s.studioDesc}>{t.studio_desc}</p>
           </div>
@@ -505,7 +463,7 @@ export function Portfolio() {
       <section id="about" className={s.about}>
         <div className={s.aboutInner}>
           <div data-reveal="1" className={s.aboutSide}>
-            <div className={s.eyebrow}>05 / {t.sec_about}</div>
+            <div className={s.eyebrow}>04 / {t.sec_about}</div>
             <div className={s.portrait}>
               <Image src="/assets/gabriel.jpg" alt="Gabriel Sandim" width={400} height={400} sizes="(max-width: 900px) 92vw, 360px" className={s.portraitImg} />
               <div className={s.portraitTag}>São Paulo · GMT-3</div>
@@ -532,7 +490,7 @@ export function Portfolio() {
 
       <section id="contact" className={s.contact}>
         <div className={s.contactInner}>
-          <div data-reveal="1" className={s.eyebrow}>06 / {t.sec_contact}</div>
+          <div data-reveal="1" className={s.eyebrow}>05 / {t.sec_contact}</div>
           <h2 data-reveal="1" className={s.contactTitle}>{t.contact_title}</h2>
           <p data-reveal="1" className={s.contactSub}>{t.contact_sub}</p>
           <div data-reveal="1" className={s.emailRow}>

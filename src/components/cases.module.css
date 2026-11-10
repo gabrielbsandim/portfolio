@@ -118,7 +118,6 @@
   text-wrap: balance;
 }
 
-.root .crumb,
 .crumb {
   display: inline-block;
   margin-bottom: 20px;
@@ -224,4 +223,30 @@
   background: #fff;
   padding: 5px;
   object-fit: contain;
+}
+
+.navEnd {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.navEnd a.homeLink {
+  padding: 7px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  font-size: 14px;
+  color: var(--fg);
+  white-space: nowrap;
+}
+
+@media (max-width: 420px) {
+  .domain {
+    display: none;
+  }
+}
+
+.navEnd a.homeLink:hover {
+  border-color: var(--acc);
+  color: var(--acc);
 }

@@ -2,9 +2,11 @@
 
 import Link from 'next/link';
 import type { ReactNode } from 'react';
+import { CASES_UI } from '@/content/cases';
 import type { Lang } from '@/content/portfolio';
 import { LangToggle } from './lang-toggle';
 import s from './privacy.module.css';
+import c from './cases.module.css';
 
 type Props = { lang: Lang; setLang: (lang: Lang) => void; children: ReactNode };
 
@@ -19,9 +21,12 @@ export function CaseShell({ lang, setLang, children }: Props) {
               <rect x="50" y="42" width="44" height="16" fill="#F3F2EE" />
               <rect x="64" y="6" width="22" height="22" rx="4" fill="#5CC8E8" />
             </svg>
-            <span className={s.domain}>gbstec.dev.br</span>
+            <span className={`${s.domain} ${c.domain}`}>gbstec.dev.br</span>
           </Link>
-          <LangToggle lang={lang} order={['en', 'pt']} onChange={setLang} />
+          <div className={c.navEnd}>
+            <Link href="/" className={c.homeLink}>← {CASES_UI[lang].home}</Link>
+            <LangToggle lang={lang} order={['en', 'pt']} onChange={setLang} />
+          </div>
         </div>
       </nav>
       <main className={s.main}>{children}</main>
