@@ -282,7 +282,7 @@ export function Portfolio() {
           </div>
           <div className={s.jobs}>
             {t.jobs.map((j) => (
-              <div key={j.company} data-reveal="1" className={s.job}>
+              <div key={`${j.company}-${j.role}`} data-reveal="1" className={s.job}>
                 <div className={s.jobMeta}>
                   <div className={s.jobPeriod}>{j.period}</div>
                   <div className={s.jobCompany}>{j.company}</div>
@@ -359,6 +359,12 @@ export function Portfolio() {
             <div className={s.featureLinks}>
               <a href={LINKS.obra} target="_blank" rel="noreferrer" className={s.featureCta}>
                 {t.visit} <span className={s.mono}>↗</span>
+              </a>
+              <a href={LINKS.obraIos} target="_blank" rel="noreferrer" className={s.featureLink}>
+                {t.obra_ios}
+              </a>
+              <a href={LINKS.obraPlay} target="_blank" rel="noreferrer" className={s.featureLink}>
+                {t.obra_play}
               </a>
               <a href={LINKS.obraPrivacy} target="_blank" rel="noreferrer" className={s.featureLink}>
                 {t.privacy}

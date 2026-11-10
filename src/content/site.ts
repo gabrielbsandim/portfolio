@@ -8,10 +8,10 @@ export const PERSON_JSON_LD = {
   name: 'Gabriel Sandim',
   url: SITE_URL,
   image: `${SITE_URL}/assets/gabriel.jpg`,
-  jobTitle: 'Product Engineer, Frontend & AI',
+  jobTitle: 'Full Stack Engineer, AI & LLMs',
   email: `mailto:${LINKS.email}`,
   address: { '@type': 'PostalAddress', addressLocality: 'São Paulo', addressCountry: 'BR' },
-  knowsAbout: ['React', 'React Native', 'TypeScript', 'Next.js', 'Micro Frontends', 'Design Systems', 'AI agents', 'MCP', 'Claude Code'],
+  knowsAbout: ['TypeScript', 'React', 'Node.js', 'Next.js', 'React Native', 'LLM APIs', 'Vertex AI', 'Amazon Bedrock', 'AI agents', 'MCP', 'Claude Code', 'Micro Frontends', 'Design Systems'],
   sameAs: [LINKS.linkedin, LINKS.github],
   worksFor: {
     '@type': 'Organization',

@@ -3,11 +3,16 @@ import { LINKS } from '@/content/portfolio';
 import s from './resume.module.css';
 
 const SKILL_ROWS = [
-  ['Frontend', 'React, React Native, TypeScript, JavaScript, Next.js, Micro Frontends, Design Systems'],
-  ['AI engineering', 'Claude Code, AI agents, MCP, LLM APIs, prompt and context engineering, Lovable'],
-  ['Backend and infra', 'Node.js, PostgreSQL, Firebase, Vercel, Sentry, CI/CD, Azure DevOps'],
+  ['AI engineering', 'LLM APIs, Vertex AI, Amazon Bedrock, prompt caching, OCR pipelines, cost and latency tracing, AI agents, Claude Code, MCP'],
+  ['Full stack', 'TypeScript, React, Next.js, Node.js, PostgreSQL, Micro Frontends, Design Systems'],
+  ['Infra', 'Vercel, Firebase, Sentry, Langfuse, CI/CD, Azure DevOps'],
   ['Mobile and testing', 'Expo, Flutter, Ionic, Jest, code review, monitoring'],
 ] as const;
+
+const LLM_WORK = [
+  'Own the internal API our products use to call Vertex AI: configuration, cost and latency measurement, and the move to multi-provider.',
+  'Cut the cost of a complex OCR-heavy analysis from ~US$13 to ~US$6 per run with the same model, through prompt work, a better OCR step, reordered calls and explicit caching. Validating Amazon Bedrock with other models, projected at ~US$2.5.',
+];
 
 const AI_WORK = [
   'Compressed ~6 months of discovery for a large initiative into days by using AI to analyze requirements, define scope, build a working prototype and write the documentation; the project was approved in under 2 weeks.',
@@ -63,7 +68,7 @@ export function Resume() {
           <div>
             <h1 className={s.name}>Gabriel Sandim</h1>
             <div className={s.headline}>
-              Frontend Engineer <span className={s.acc}>·</span> AI Engineering
+              Full Stack Engineer <span className={s.acc}>·</span> AI Engineering
             </div>
           </div>
           <div className={s.contact}>
@@ -79,11 +84,11 @@ export function Resume() {
         <div>
           <h2 className={s.h2}>Summary</h2>
           <p className={s.summary}>
-            Frontend Engineer with 6+ years building web and mobile products in React and React Native for enterprise
-            platforms used in 5 countries. Recently focused on AI engineering: I build agents, internal tooling and
-            workflows with Claude Code and MCP that speed up discovery, development and code review for my team. Founder
-            of GBS Tecnologia, where I ship and run my own SaaS products. Professional English, working with US and
-            European teams.
+            Full Stack Engineer with 6+ years building web and mobile products in TypeScript for enterprise platforms
+            used in 5 countries. Most of my work now is LLM engineering: I run the internal API that calls our models
+            and cut cost per analysis by more than half with the same model. I also build agents and Claude Code
+            tooling that speed up discovery, development and code review. On the side I ship and run my own apps, live
+            on the App Store and Google Play. Professional English, working with US and European teams.
           </p>
         </div>
 
@@ -101,7 +106,11 @@ export function Resume() {
 
         <div className={s.block}>
           <h2 className={s.h2}>Experience</h2>
-          <Role org="Air Liquide" title="Frontend Engineer" dates="Oct 2021 - Present" />
+          <Role org="Air Liquide" title="Full Stack Engineer" dates="Aug 2026 - Present" />
+          <Bullets items={LLM_WORK} />
+          <div className={s.stack}>TypeScript, Node.js, React, Vertex AI, Amazon Bedrock, Claude Code</div>
+          <div className={s.subGap} />
+          <Role org="Air Liquide" title="Frontend Engineer" dates="Oct 2021 - Aug 2026" />
           <div className={s.sub}>AI engineering initiatives (2026)</div>
           <Bullets items={AI_WORK} />
           <div className={`${s.sub} ${s.subGap}`}>Platform and architecture</div>
@@ -117,19 +126,20 @@ export function Resume() {
         </div>
 
         <div className={s.block}>
-          <Role org="GBS Tecnologia da Informação" title="Founder and Software Engineer" dates="2021 - Present" />
+          <Role org="GBS Tecnologia da Informação" title="Side products, built and run solo" dates="2021 - Present" />
           <ul className={s.list}>
             <li>
-              Founded a software company that builds and operates its own products end to end: product design,
-              frontend, backend, infrastructure, billing and support.
+              My own company for side products, run end to end: product design, frontend, backend, infrastructure,
+              billing and support.
             </li>
             <li>
               <strong>Obra Nova</strong> (obranova.com.br): SaaS for small and mid-sized construction companies with
-              paid plans. Projects, finances and P&amp;L per project, plus an AI assistant on WhatsApp that files daily
-              site reports by voice. Next.js, PostgreSQL, Vercel, Sentry, React Native.
+              paid plans, on the web, App Store and Google Play. Projects, finances and P&amp;L per project, plus an AI
+              assistant on WhatsApp with 39 tools that files daily site reports by voice; p95 response time cut from
+              82 s to 8 s, traced in Langfuse. Next.js, PostgreSQL, Vercel, Sentry, Flutter.
             </li>
             <li>
-              <strong>Kapi</strong> (kapiapp.com.br): gamified workout app live on Google Play. Guided workouts, XP,
+              <strong>Kapi</strong> (kapiapp.com.br): gamified workout app live on Google Play, App Store review pending. Guided workouts, XP,
               belts and weekly leagues, watch import through Health Connect and in-app subscriptions. Flutter, Next.js,
               PostgreSQL; first commit to store listing in under a week.
             </li>

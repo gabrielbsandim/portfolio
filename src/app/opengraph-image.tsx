@@ -1,6 +1,6 @@
 import { ImageResponse } from 'next/og';
 
-export const alt = 'Gabriel Sandim · Product Engineer, Frontend & AI';
+export const alt = 'Gabriel Sandim · Full Stack Engineer, AI & LLMs';
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 
@@ -32,11 +32,11 @@ export default function OpengraphImage() {
             Gabriel Sandim<span style={{ color: '#5CC8E8' }}>.</span>
           </div>
           <div style={{ display: 'flex', marginTop: 28, fontSize: 44, color: '#c9cad0' }}>
-            Product Engineer · Frontend &amp; AI
+            Full Stack Engineer · AI &amp; LLMs
           </div>
         </div>
         <div style={{ display: 'flex', fontSize: 28, color: '#9a9ca5' }}>
-          React · TypeScript · AI agents · Founder of GBS Tecnologia
+          TypeScript · React · Node.js · LLMs · AI agents
         </div>
       </div>
     ),

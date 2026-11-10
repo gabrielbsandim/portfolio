@@ -434,6 +434,22 @@
   background: #16181d;
 }
 
+@media (min-width: 640px) {
+  .aiGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .aiCard:first-child {
+    grid-column: span 2;
+  }
+}
+
+@media (min-width: 1100px) {
+  .aiGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 .aiCardTop {
   display: flex;
   justify-content: space-between;
