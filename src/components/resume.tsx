@@ -108,7 +108,7 @@ export function Resume() {
           <h2 className={s.h2}>Experience</h2>
           <Role org="Air Liquide" title="Full Stack Engineer" dates="Aug 2026 - Present" />
           <Bullets items={LLM_WORK} />
-          <div className={s.stack}>TypeScript, Node.js, React, Vertex AI, Amazon Bedrock, Claude Code</div>
+          <div className={s.stack}>TypeScript, Node.js, React, React Native, Vertex AI, Amazon Bedrock, Claude Code</div>
           <div className={s.subGap} />
           <Role org="Air Liquide" title="Frontend Engineer" dates="Oct 2021 - Aug 2026" />
           <div className={s.sub}>AI engineering initiatives (2026)</div>
@@ -140,7 +140,7 @@ export function Resume() {
             </li>
             <li>
               <strong>Kapi</strong> (kapiapp.com.br): gamified workout app live on Google Play, App Store review pending. Guided workouts, XP,
-              belts and weekly leagues, watch import through Health Connect and in-app subscriptions. Flutter, Next.js,
+              streaks and weekly rankings, watch import through Health Connect and in-app subscriptions. Flutter, Next.js,
               PostgreSQL; first commit to store listing in under a week.
             </li>
             <li>

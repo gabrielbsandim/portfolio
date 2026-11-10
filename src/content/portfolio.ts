@@ -84,20 +84,20 @@ export const COPY: Record<Lang, Copy> = {
     ai_proof: 'Public proof: task-funnel, my open-source Claude Code plugin that turns one task into a reviewed pull request.',
     ai_proof_cta: 'See it on GitHub',
     sec_studio: 'GBS Tecnologia', studio_title: 'Side products I design, build and run end to end.',
-    studio_desc: 'GBS Tecnologia da Informação is the independent company I founded to take products from idea to production and keep them running: design, code, infrastructure, pricing and support. It owns Obra Nova, Kapi and Lifedeck, and publishes open-source tools.',
+    studio_desc: 'GBS Tecnologia da Informação is the independent company I founded to take products from idea to production and keep them running: design, code, infrastructure, pricing and support. It owns Obra Nova, Kapi and Lifedeck, and publishes open-source tools. It is also where I learn the most: every product is a lab for new stacks, models and tools, tested with real users.',
     company_facts: [{ k: 'Legal name', v: 'GBS Tecnologia da Informação Ltda' }, { k: 'CNPJ', v: '44.000.992/0001-22' }, { k: 'Based in', v: 'São Paulo, Brazil' }],
     obra_tag: 'Flagship · SaaS for construction',
     obra_desc: 'Management platform for small and mid-sized construction companies. Projects, crews, documents and finances in one dashboard. It flags budget overruns early and puts an AI assistant on WhatsApp that files daily site reports by voice.',
     obra_points: ['AI assistant on WhatsApp: 39 tools, p95 from 82 s to 8 s', 'Planned vs. actual cost, per stage', 'Native app on iOS and Android'],
     obra_status: 'Live, paying plans', obra_app: 'App Store · Google Play', obra_ios: 'App Store', obra_play: 'Google Play', visit: 'Visit site', privacy: 'Privacy policy',
     kapi_tag: 'New · Gamified fitness app',
-    kapi_desc: 'A workout app that plays like a game. Guided 7 to 25 minute sessions, XP for every minute, ten belts to climb and a new league every week with people at your level. Workouts from your watch count too, and on Kapi Pro every belt you earn ships as a physical bracelet.',
-    kapi_points: ['Guided workouts, 7 to 25 minutes', 'Belts, streaks and a weekly league of 30', 'From first commit to Google Play in under a week'],
+    kapi_desc: 'A workout app that plays like a game. Guided 7 to 25 minute sessions with no equipment, XP for every minute, a daily mission and a streak that respects your rest days. Weekly rankings among the people you follow, in Brazil and in your city, and workouts from your watch count too.',
+    kapi_points: ['Guided workouts, 7 to 25 minutes', 'XP, daily missions and streaks', 'From first commit to Google Play in under a week'],
     kapi_status: 'Live on Google Play · App Store in review', kapi_stack: 'Flutter · Next.js · Postgres', kapi_store: 'Get it on Google Play',
     kapi_shots: [
-      { src: '/assets/kapi-league-en.webp', alt: 'Kapi: weekly league' },
-      { src: '/assets/kapi-home-en.webp', alt: 'Kapi: today, with the daily ring and XP' },
-      { src: '/assets/kapi-finish-en.webp', alt: 'Kapi: workout complete, XP earned' },
+      { src: '/assets/kapi-rankings-en.webp', alt: 'Kapi: weekly rankings among the people you follow' },
+      { src: '/assets/kapi-today-en.webp', alt: 'Kapi: today, with the daily ring and XP' },
+      { src: '/assets/kapi-player-en.webp', alt: 'Kapi: guided workout, timer and how-to tip' },
     ],
     products: [
       { icon: '/assets/lifedeck-icon.png', name: 'Lifedeck', tag: 'Productivity · WhatsApp', badge: 'Live', url: LINKS.life, cta: 'lifedeck.com.br', desc: 'Your whole life, calmly in hand. Tasks and events with reminders on WhatsApp, and you can add new ones just by sending a message.', stack: 'WhatsApp integration' },
@@ -119,7 +119,7 @@ export const COPY: Record<Lang, Copy> = {
       { label: 'Volunteering', title: 'Computer Science Instructor', meta: 'Associação Árvore da Vida: digital inclusion for kids and teens aged 6–17' },
     ],
     jobs: [
-      { period: 'Aug 2026 - Present', company: 'Air Liquide', role: 'Full Stack Engineer', stack: ['TypeScript', 'Node.js', 'React', 'Vertex AI', 'Amazon Bedrock', 'Claude Code'], items: [
+      { period: 'Aug 2026 - Present', company: 'Air Liquide', role: 'Full Stack Engineer', stack: ['TypeScript', 'Node.js', 'React', 'React Native', 'Vertex AI', 'Amazon Bedrock', 'Claude Code'], items: [
         { g: 'LLM platform', h: '~US$13 → ~US$6 per analysis.', d: 'Same model, lower bill, measured with evals: prompt work, a better OCR step, reordered calls and explicit caching on our internal API over Vertex AI. Validating Amazon Bedrock with other models, projected at ~US$2.5.' },
         { h: 'Internal LLM API.', d: 'Configure, measure and tune the API our products use to call the models: cost and latency per call, provider setup and the move to multi-provider. Proposed Langfuse for tracing, now being adopted.' },
       ] },
@@ -172,20 +172,20 @@ export const COPY: Record<Lang, Copy> = {
     ai_proof: 'Prova pública: task-funnel, meu plugin open source para o Claude Code que transforma uma tarefa em um pull request revisado.',
     ai_proof_cta: 'Ver no GitHub',
     sec_studio: 'GBS Tecnologia', studio_title: 'Produtos paralelos que eu desenho, construo e opero de ponta a ponta.',
-    studio_desc: 'A GBS Tecnologia da Informação é a empresa independente que fundei para levar produtos da ideia à produção e mantê-los rodando: design, código, infraestrutura, preço e suporte. É dona do Obra Nova, do Kapi e do Lifedeck, e publica ferramentas open source.',
+    studio_desc: 'A GBS Tecnologia da Informação é a empresa independente que fundei para levar produtos da ideia à produção e mantê-los rodando: design, código, infraestrutura, preço e suporte. É dona do Obra Nova, do Kapi e do Lifedeck, e publica ferramentas open source. Também é onde mais aprendo: cada produto é um laboratório para stacks, modelos e ferramentas novas, testados com usuários reais.',
     company_facts: [{ k: 'Razão social', v: 'GBS Tecnologia da Informação Ltda' }, { k: 'CNPJ', v: '44.000.992/0001-22' }, { k: 'Sede', v: 'São Paulo, Brasil' }],
     obra_tag: 'Carro-chefe · SaaS para construtoras',
     obra_desc: 'Plataforma de gestão para construtoras de pequeno e médio porte. Obras, equipes, documentos e financeiro num painel só. Antecipa estouros de orçamento e coloca um assistente com IA no WhatsApp que preenche o diário de obra por voz.',
     obra_points: ['Assistente com IA no WhatsApp: 39 tools, p95 de 82 s para 8 s', 'Planejado vs. realizado por etapa', 'App nativo no iOS e no Android'],
     obra_status: 'No ar, com planos pagos', obra_app: 'App Store · Google Play', obra_ios: 'App Store', obra_play: 'Google Play', visit: 'Visitar site', privacy: 'Política de privacidade',
     kapi_tag: 'Novo · App de treino gamificado',
-    kapi_desc: 'Um app de treino que funciona como jogo. Sessões guiadas de 7 a 25 minutos, XP a cada minuto, dez faixas para subir e uma liga nova toda semana com gente do seu nível. Treino do relógio também conta, e no Kapi Pro cada faixa conquistada vira uma pulseira física.',
-    kapi_points: ['Treinos guiados de 7 a 25 minutos', 'Faixas, sequência e liga semanal de 30', 'Do primeiro commit ao Google Play em menos de uma semana'],
+    kapi_desc: 'Um app de treino que funciona como jogo. Sessões guiadas de 7 a 25 minutos, sem equipamento, XP a cada minuto, uma missão por dia e uma sequência que respeita seus dias de descanso. Rankings semanais entre quem você segue, no Brasil e na sua cidade, e treino do relógio também conta.',
+    kapi_points: ['Treinos guiados de 7 a 25 minutos', 'XP, missões diárias e sequência', 'Do primeiro commit ao Google Play em menos de uma semana'],
     kapi_status: 'No ar no Google Play · App Store em revisão', kapi_stack: 'Flutter · Next.js · Postgres', kapi_store: 'Baixar no Google Play',
     kapi_shots: [
-      { src: '/assets/kapi-league-pt.webp', alt: 'Kapi: liga da semana' },
-      { src: '/assets/kapi-home-pt.webp', alt: 'Kapi: hoje, com o anel do dia e o XP' },
-      { src: '/assets/kapi-finish-pt.webp', alt: 'Kapi: treino concluído, XP ganho' },
+      { src: '/assets/kapi-rankings-pt.webp', alt: 'Kapi: ranking da semana entre quem você segue' },
+      { src: '/assets/kapi-today-pt.webp', alt: 'Kapi: hoje, com o anel do dia e o XP' },
+      { src: '/assets/kapi-player-pt.webp', alt: 'Kapi: treino guiado, cronômetro e dica de execução' },
     ],
     products: [
       { icon: '/assets/lifedeck-icon.png', name: 'Lifedeck', tag: 'Produtividade · WhatsApp', badge: 'No ar', url: LINKS.life, cta: 'lifedeck.com.br', desc: 'Sua vida inteira, com calma, na mão. Tarefas e eventos com lembretes no WhatsApp, e dá para adicionar novos só mandando uma mensagem.', stack: 'Integração com WhatsApp' },
@@ -207,7 +207,7 @@ export const COPY: Record<Lang, Copy> = {
       { label: 'Voluntariado', title: 'Instrutor de Informática', meta: 'Associação Árvore da Vida: inclusão digital para crianças e jovens de 6 a 17 anos' },
     ],
     jobs: [
-      { period: 'Ago 2026 - Atual', company: 'Air Liquide', role: 'Engenheiro Full Stack', stack: ['TypeScript', 'Node.js', 'React', 'Vertex AI', 'Amazon Bedrock', 'Claude Code'], items: [
+      { period: 'Ago 2026 - Atual', company: 'Air Liquide', role: 'Engenheiro Full Stack', stack: ['TypeScript', 'Node.js', 'React', 'React Native', 'Vertex AI', 'Amazon Bedrock', 'Claude Code'], items: [
         { g: 'Plataforma de LLM', h: '~US$ 13 → ~US$ 6 por análise.', d: 'Mesmo modelo, conta menor, medido com evals: ajuste de prompts, OCR melhor, nova ordem das chamadas e cache explícito na nossa API interna sobre a Vertex AI. Validando Amazon Bedrock com outros modelos, com previsão de ~US$ 2,5.' },
         { h: 'API interna de LLM.', d: 'Configuro, meço e ajusto a API que nossos produtos usam para chamar os modelos: custo e latência por chamada, configuração de provedores e a ida para multi-provedor. Indiquei o Langfuse para tracing, em adoção.' },
       ] },

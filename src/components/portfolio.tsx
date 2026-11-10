@@ -428,7 +428,7 @@ export function Portfolio() {
           <div className={s.kapiShots}>
             {t.kapi_shots.map((ks, i) => (
               <div key={ks.src} ref={i === 1 ? phoneRef : undefined} className={s.phone}>
-                <Image src={ks.src} alt={ks.alt} width={480} height={1013} sizes="(max-width: 900px) 40vw, 240px" className={s.shotImg} />
+                <Image src={ks.src} alt={ks.alt} width={480} height={1067} sizes="(max-width: 900px) 40vw, 240px" className={s.shotImg} />
               </div>
             ))}
           </div>
