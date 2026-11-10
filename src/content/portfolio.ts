@@ -18,6 +18,7 @@ export const LINKS = {
   brand: '/brand',
   email: 'gabriel@gbstec.dev.br',
   privacy: '/privacy',
+  cases: '/cases',
   obraCase: '/cases/obra-nova',
 } as const;
 
@@ -37,11 +38,12 @@ type JobItem = { g?: string; h: string; d: string };
 type Job = { period: string; company: string; role: string; prev?: string; stack: string[]; items: JobItem[] };
 
 export type Copy = {
-  nav_ai: string; nav_studio: string; nav_exp: string; nav_about: string; nav_contact: string;
+  nav_ai: string; nav_cases: string; nav_studio: string; nav_exp: string; nav_about: string; nav_contact: string;
   kicker: string; role_prefix: string; words: string[]; hero_sub: string; glance: string[];
   cta_work: string; cta_cv: string; stats: Stat[];
   sec_ai: string; ai_title: string; ai_desc: string; ai_items: AiItem[];
   ai_principles_label: string; ai_principles: Principle[]; ai_proof: string; ai_proof_cta: string;
+  sec_cases: string; cases_title: string; cases_desc: string; cases_all: string; cases_read: string;
   sec_studio: string; studio_title: string; studio_desc: string; company_facts: CompanyFact[];
   obra_tag: string; obra_desc: string; obra_points: string[]; obra_status: string; obra_app: string; obra_ios: string; obra_play: string; obra_case: string;
   kapi_tag: string; kapi_desc: string; kapi_points: string[]; kapi_status: string; kapi_stack: string; kapi_store: string; kapi_shots: Shot[];
@@ -54,7 +56,7 @@ export type Copy = {
 
 export const COPY: Record<Lang, Copy> = {
   en: {
-    nav_ai: 'AI', nav_studio: 'GBS', nav_exp: 'Career', nav_about: 'About', nav_contact: 'Contact',
+    nav_ai: 'AI', nav_cases: 'Cases', nav_studio: 'GBS', nav_exp: 'Career', nav_about: 'About', nav_contact: 'Contact',
     kicker: 'Full Stack Engineer · AI & LLMs · São Paulo, GMT-3',
     role_prefix: 'Full stack engineer building',
     words: ['AI-powered products.', 'cheaper LLM pipelines.', 'scalable interfaces.', 'my own apps.'],
@@ -84,6 +86,9 @@ export const COPY: Record<Lang, Copy> = {
     ],
     ai_proof: 'Public proof: task-funnel, my open-source Claude Code plugin that turns one task into a reviewed pull request.',
     ai_proof_cta: 'See it on GitHub',
+    sec_cases: 'Case studies', cases_title: 'What I built, and the numbers behind it.',
+    cases_desc: 'Short write-ups of products I build and run: the problem, what I built and how I know it works.',
+    cases_all: 'All case studies', cases_read: 'Read the case',
     sec_studio: 'GBS Tecnologia', studio_title: 'Side products I design, build and run end to end.',
     studio_desc: 'GBS Tecnologia da Informação is the independent company I founded to take products from idea to production and keep them running: design, code, infrastructure, pricing and support. It owns Obra Nova, Kapi and Lifedeck, and publishes open-source tools. It is also where I learn the most: every product is a lab for new stacks, models and tools, tested with real users.',
     company_facts: [{ k: 'Legal name', v: 'GBS Tecnologia da Informação Ltda' }, { k: 'CNPJ', v: '44.000.992/0001-22' }, { k: 'Based in', v: 'São Paulo, Brazil' }],
@@ -140,7 +145,7 @@ export const COPY: Record<Lang, Copy> = {
     ],
   },
   pt: {
-    nav_ai: 'IA', nav_studio: 'GBS', nav_exp: 'Carreira', nav_about: 'Sobre', nav_contact: 'Contato',
+    nav_ai: 'IA', nav_cases: 'Cases', nav_studio: 'GBS', nav_exp: 'Carreira', nav_about: 'Sobre', nav_contact: 'Contato',
     kicker: 'Engenheiro Full Stack · IA e LLMs · São Paulo, GMT-3',
     role_prefix: 'Engenheiro full stack construindo',
     words: ['produtos com IA.', 'pipelines de LLM mais baratos.', 'interfaces escaláveis.', 'meus próprios apps.'],
@@ -170,6 +175,9 @@ export const COPY: Record<Lang, Copy> = {
     ],
     ai_proof: 'Prova pública: task-funnel, meu plugin open source para o Claude Code que transforma uma tarefa em um pull request revisado.',
     ai_proof_cta: 'Ver no GitHub',
+    sec_cases: 'Estudos de caso', cases_title: 'O que construí, e os números por trás.',
+    cases_desc: 'Relatos curtos de produtos que construo e opero: o problema, o que construí e como sei que funciona.',
+    cases_all: 'Todos os estudos de caso', cases_read: 'Ler o caso',
     sec_studio: 'GBS Tecnologia', studio_title: 'Produtos paralelos que eu desenho, construo e opero de ponta a ponta.',
     studio_desc: 'A GBS Tecnologia da Informação é a empresa independente que fundei para levar produtos da ideia à produção e mantê-los rodando: design, código, infraestrutura, preço e suporte. É dona do Obra Nova, do Kapi e do Lifedeck, e publica ferramentas open source. Também é onde mais aprendo: cada produto é um laboratório para stacks, modelos e ferramentas novas, testados com usuários reais.',
     company_facts: [{ k: 'Razão social', v: 'GBS Tecnologia da Informação Ltda' }, { k: 'CNPJ', v: '44.000.992/0001-22' }, { k: 'Sede', v: 'São Paulo, Brasil' }],

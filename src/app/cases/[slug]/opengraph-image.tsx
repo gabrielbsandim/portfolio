@@ -1,16 +1,17 @@
 import { ImageResponse } from 'next/og';
+import { CASES, findCase } from '@/content/cases';
 
-export const alt = 'Obra Nova case study: an AI assistant for construction sites, chosen by evals';
+export const alt = 'Case study by Gabriel Sandim';
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 
-const STATS = [
-  { v: '3.3 s', l: 'median reply' },
-  { v: '6.4 s', l: 'p95 reply' },
-  { v: '55 → 99.7', l: 'diary extraction' },
-];
+export function generateStaticParams() {
+  return CASES.map((entry) => ({ slug: entry.slug }));
+}
 
-export default function OpengraphImage() {
+export default async function OpengraphImage({ params }: { params: Promise<{ slug: string }> }) {
+  const entry = findCase((await params).slug) ?? CASES[0];
+  const t = entry.copy.en;
   return new ImageResponse(
     (
       <div
@@ -31,18 +32,18 @@ export default function OpengraphImage() {
             <rect x="50" y="42" width="44" height="16" fill="#F3F2EE" />
             <rect x="64" y="6" width="22" height="22" rx="4" fill="#5CC8E8" />
           </svg>
-          <div style={{ display: 'flex', fontSize: 26, color: '#5CC8E8', letterSpacing: 3 }}>CASE STUDY · OBRA NOVA</div>
-        </div>
-        <div style={{ display: 'flex', flexDirection: 'column' }}>
-          <div style={{ display: 'flex', fontSize: 76, fontWeight: 700, letterSpacing: -3, lineHeight: 1.05 }}>
-            An AI assistant for construction sites, chosen by evals
+          <div style={{ display: 'flex', fontSize: 26, color: '#5CC8E8', letterSpacing: 3 }}>
+            {`CASE STUDY · ${entry.name.toUpperCase()}`}
           </div>
         </div>
+        <div style={{ display: 'flex', fontSize: 68, fontWeight: 700, letterSpacing: -3, lineHeight: 1.05 }}>
+          {t.title}
+        </div>
         <div style={{ display: 'flex', gap: 56 }}>
-          {STATS.map((s) => (
-            <div key={s.l} style={{ display: 'flex', flexDirection: 'column' }}>
-              <div style={{ display: 'flex', fontSize: 52, fontWeight: 700 }}>{s.v}</div>
-              <div style={{ display: 'flex', fontSize: 24, color: '#9a9ca5' }}>{s.l}</div>
+          {t.stats.slice(0, 3).map((s) => (
+            <div key={s.label} style={{ display: 'flex', flexDirection: 'column' }}>
+              <div style={{ display: 'flex', fontSize: 48, fontWeight: 700 }}>{s.v}</div>
+              <div style={{ display: 'flex', fontSize: 22, color: '#9a9ca5' }}>{s.label}</div>
             </div>
           ))}
         </div>
