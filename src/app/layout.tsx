@@ -1,10 +1,10 @@
 import type { Metadata, Viewport } from 'next';
-import { Geist, Geist_Mono } from 'next/font/google';
+import localFont from 'next/font/local';
 import { SITE_URL } from '@/content/site';
 import './globals.css';
 
-const sans = Geist({ subsets: ['latin'], weight: ['300', '400', '500', '600', '700'], variable: '--font-sans' });
-const mono = Geist_Mono({ subsets: ['latin'], weight: ['400', '500'], variable: '--font-mono' });
+const sans = localFont({ src: './fonts/geist-latin.woff2', weight: '300 700', variable: '--font-sans' });
+const mono = localFont({ src: './fonts/geist-mono-latin.woff2', weight: '400 500', variable: '--font-mono' });
 
 const TITLE = 'Gabriel Sandim · Full Stack Engineer, AI & LLMs';
 const SHORT = 'TypeScript, React, Node.js and LLMs in production, measured by cost and latency.';
