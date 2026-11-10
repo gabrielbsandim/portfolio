@@ -10,8 +10,8 @@ const SKILL_ROWS = [
 ] as const;
 
 const LLM_WORK = [
-  'Own the internal API our products use to call Vertex AI: configuration, cost and latency measurement, and the move to multi-provider.',
-  'Cut the cost of a complex OCR-heavy analysis from ~US$13 to ~US$6 per run with the same model, through prompt work, a better OCR step, reordered calls and explicit caching. Validating Amazon Bedrock with other models, projected at ~US$2.5.',
+  'Own the internal API our products use to call Vertex AI: configuration, cost and latency measurement, and the move to multi-provider. Proposed Langfuse for tracing, now being adopted.',
+  'Cut the cost of a complex OCR-heavy analysis from ~US$13 to ~US$6 per run with the same model, through prompt work, a better OCR step, reordered calls and explicit caching, with evals confirming quality held. Validating Amazon Bedrock with other models, projected at ~US$2.5.',
 ];
 
 const AI_WORK = [
