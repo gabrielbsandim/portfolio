@@ -106,16 +106,12 @@ export function Resume() {
 
         <div className={s.block}>
           <h2 className={s.h2}>Experience</h2>
-          <Role org="Air Liquide" title="Full Stack Engineer" dates="Aug 2026 - Present" />
-          <Bullets items={LLM_WORK} />
-          <div className={s.stack}>TypeScript, Node.js, React, React Native, Vertex AI, Amazon Bedrock, Claude Code</div>
-          <div className={s.subGap} />
-          <Role org="Air Liquide" title="Frontend Engineer" dates="Oct 2021 - Aug 2026" />
-          <div className={s.sub}>AI engineering initiatives (2026)</div>
-          <Bullets items={AI_WORK} />
+          <Role org="Air Liquide" title="Full Stack Engineer since Aug 2026, Frontend Engineer before" dates="Oct 2021 - Present" />
+          <div className={s.sub}>AI and LLM engineering (2026)</div>
+          <Bullets items={[...LLM_WORK, ...AI_WORK]} />
           <div className={`${s.sub} ${s.subGap}`}>Platform and architecture</div>
           <Bullets items={PLATFORM_WORK} />
-          <div className={s.stack}>React, React Native, TypeScript, Jest, Claude Code, MCP, Azure DevOps</div>
+          <div className={s.stack}>TypeScript, Node.js, React, React Native, Vertex AI, Amazon Bedrock, Claude Code, MCP, Jest, Azure DevOps</div>
         </div>
       </section>
 

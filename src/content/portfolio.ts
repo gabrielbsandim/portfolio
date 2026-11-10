@@ -33,7 +33,7 @@ type CompanyFact = { k: string; v: string };
 type Shot = { src: string; alt: string };
 type Product = { icon: string; name: string; tag: string; badge: string; url: string; cta: string; desc: string; stack: string };
 type JobItem = { g?: string; h: string; d: string };
-type Job = { period: string; company: string; role: string; stack: string[]; items: JobItem[] };
+type Job = { period: string; company: string; role: string; prev?: string; stack: string[]; items: JobItem[] };
 
 export type Copy = {
   nav_ai: string; nav_studio: string; nav_exp: string; nav_about: string; nav_contact: string;
@@ -119,12 +119,10 @@ export const COPY: Record<Lang, Copy> = {
       { label: 'Volunteering', title: 'Computer Science Instructor', meta: 'Associação Árvore da Vida: digital inclusion for kids and teens aged 6–17' },
     ],
     jobs: [
-      { period: 'Aug 2026 - Present', company: 'Air Liquide', role: 'Full Stack Engineer', stack: ['TypeScript', 'Node.js', 'React', 'React Native', 'Vertex AI', 'Amazon Bedrock', 'Claude Code'], items: [
-        { g: 'LLM platform', h: '~US$13 → ~US$6 per analysis.', d: 'Same model, lower bill, measured with evals: prompt work, a better OCR step, reordered calls and explicit caching on our internal API over Vertex AI. Validating Amazon Bedrock with other models, projected at ~US$2.5.' },
+      { period: 'Oct 2021 - Present', company: 'Air Liquide', role: 'Full Stack Engineer', prev: 'Frontend Engineer, Oct 2021 to Jul 2026', stack: ['TypeScript', 'Node.js', 'React', 'React Native', 'Vertex AI', 'Amazon Bedrock', 'Claude Code', 'MCP', 'Jest', 'Azure DevOps'], items: [
+        { g: '2026 · AI & LLM engineering', h: '~US$13 → ~US$6 per analysis.', d: 'Same model, lower bill, measured with evals: prompt work, a better OCR step, reordered calls and explicit caching on our internal API over Vertex AI. Validating Amazon Bedrock with other models, projected at ~US$2.5.' },
         { h: 'Internal LLM API.', d: 'Configure, measure and tune the API our products use to call the models: cost and latency per call, provider setup and the move to multi-provider. Proposed Langfuse for tracing, now being adopted.' },
-      ] },
-      { period: 'Oct 2021 - Aug 2026', company: 'Air Liquide', role: 'Frontend Engineer', stack: ['React', 'React Native', 'TypeScript', 'Claude Code', 'MCP', 'Jest', 'Azure DevOps'], items: [
-        { g: '2026 · AI engineering', h: 'AI-accelerated discovery.', d: 'Analyzed, scoped, prototyped and documented a large initiative with AI in days instead of ~6 months; approved in under 2 weeks.' },
+        { h: 'AI-accelerated discovery.', d: 'Analyzed, scoped, prototyped and documented a large initiative with AI in days instead of ~6 months; approved in under 2 weeks.' },
         { h: 'Sentry → pull request agent.', d: 'Started an AI system that triages Sentry issues, reads the code and opens PRs with proposed fixes for engineers to review.' },
         { h: 'Prototype-to-feedback pipeline.', d: 'Turned Lovable and Claude prototypes into deployable review builds where business stakeholders comment in context and approve.' },
         { h: 'Team plugin for Claude Code.', d: 'Encoded team standards and skills: browser validation of tasks, Azure DevOps access, workflow funnels and PR reviewers.' },
@@ -207,12 +205,10 @@ export const COPY: Record<Lang, Copy> = {
       { label: 'Voluntariado', title: 'Instrutor de Informática', meta: 'Associação Árvore da Vida: inclusão digital para crianças e jovens de 6 a 17 anos' },
     ],
     jobs: [
-      { period: 'Ago 2026 - Atual', company: 'Air Liquide', role: 'Engenheiro Full Stack', stack: ['TypeScript', 'Node.js', 'React', 'React Native', 'Vertex AI', 'Amazon Bedrock', 'Claude Code'], items: [
-        { g: 'Plataforma de LLM', h: '~US$ 13 → ~US$ 6 por análise.', d: 'Mesmo modelo, conta menor, medido com evals: ajuste de prompts, OCR melhor, nova ordem das chamadas e cache explícito na nossa API interna sobre a Vertex AI. Validando Amazon Bedrock com outros modelos, com previsão de ~US$ 2,5.' },
+      { period: 'Out 2021 - Atual', company: 'Air Liquide', role: 'Engenheiro Full Stack', prev: 'Engenheiro Frontend, out 2021 a jul 2026', stack: ['TypeScript', 'Node.js', 'React', 'React Native', 'Vertex AI', 'Amazon Bedrock', 'Claude Code', 'MCP', 'Jest', 'Azure DevOps'], items: [
+        { g: '2026 · Engenharia de IA e LLM', h: '~US$ 13 → ~US$ 6 por análise.', d: 'Mesmo modelo, conta menor, medido com evals: ajuste de prompts, OCR melhor, nova ordem das chamadas e cache explícito na nossa API interna sobre a Vertex AI. Validando Amazon Bedrock com outros modelos, com previsão de ~US$ 2,5.' },
         { h: 'API interna de LLM.', d: 'Configuro, meço e ajusto a API que nossos produtos usam para chamar os modelos: custo e latência por chamada, configuração de provedores e a ida para multi-provedor. Indiquei o Langfuse para tracing, em adoção.' },
-      ] },
-      { period: 'Out 2021 - Ago 2026', company: 'Air Liquide', role: 'Engenheiro Frontend', stack: ['React', 'React Native', 'TypeScript', 'Claude Code', 'MCP', 'Jest', 'Azure DevOps'], items: [
-        { g: '2026 · Engenharia com IA', h: 'Discovery acelerado com IA.', d: 'Analisei, defini, prototipei e documentei um projeto grande com IA em dias, em vez de ~6 meses; aprovado em menos de 2 semanas.' },
+        { h: 'Discovery acelerado com IA.', d: 'Analisei, defini, prototipei e documentei um projeto grande com IA em dias, em vez de ~6 meses; aprovado em menos de 2 semanas.' },
         { h: 'Agente Sentry → pull request.', d: 'Puxei um sistema com IA que analisa issues do Sentry, lê o código e abre PRs com a correção proposta para revisão.' },
         { h: 'Do protótipo ao feedback.', d: 'Transformei protótipos do Lovable e do Claude em builds de revisão onde o negócio comenta no contexto e aprova.' },
         { h: 'Plugin do time para o Claude Code.', d: 'Padrões e skills do time: validação de tarefas no navegador, acesso ao Azure DevOps, funis de workflow e revisores de PR.' },

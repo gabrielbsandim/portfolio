@@ -282,11 +282,12 @@ export function Portfolio() {
           </div>
           <div className={s.jobs}>
             {t.jobs.map((j) => (
-              <div key={`${j.company}-${j.role}`} data-reveal="1" className={s.job}>
+              <div key={j.company} data-reveal="1" className={s.job}>
                 <div className={s.jobMeta}>
                   <div className={s.jobPeriod}>{j.period}</div>
                   <div className={s.jobCompany}>{j.company}</div>
                   <div className={s.jobRole}>{j.role}</div>
+                  {j.prev && <div className={s.jobPrev}>{j.prev}</div>}
                   <div className={s.jobStack}>
                     {j.stack.map((st) => (
                       <span key={st} className={s.stackTag}>{st}</span>
