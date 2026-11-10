@@ -1354,9 +1354,9 @@
 }
 
 .caseStatLabel {
-  font-family: var(--font-mono), monospace;
-  font-size: 12px;
-  color: #9a9ca5;
+  font-size: 15px;
+  line-height: 1.4;
+  color: #c9cad0;
 }
 
 .caseStatValue {
