@@ -7,6 +7,7 @@ export const LINKS = {
   obraPlay: 'https://play.google.com/store/apps/details?id=com.obranova.mobile',
   obraIos: 'https://apps.apple.com/br/app/obra-nova/id6827524138',
   kapiPlay: 'https://play.google.com/store/apps/details?id=com.gbs.kapi',
+  kapiIos: 'https://apps.apple.com/br/app/kapi-treino-que-vira-jogo/id6830934198',
   kapiPrivacy: 'https://kapiapp.com.br/privacy',
   life: 'https://www.lifedeck.com.br',
   cash: 'https://github.com/gabrielbsandim/cashdeck',
@@ -46,7 +47,7 @@ export type Copy = {
   ai_principles_label: string; ai_principles: Principle[]; ai_proof: string; ai_proof_cta: string;
   sec_studio: string; studio_title: string; studio_desc: string; company_facts: CompanyFact[];
   obra_tag: string; obra_desc: string; obra_points: string[]; obra_status: string; obra_app: string; obra_ios: string; obra_play: string; obra_case: string;
-  kapi_tag: string; kapi_desc: string; kapi_points: string[]; kapi_status: string; kapi_stack: string; kapi_store: string; kapi_shots: Shot[];
+  kapi_tag: string; kapi_desc: string; kapi_points: string[]; kapi_status: string; kapi_stack: string; kapi_shots: Shot[];
   visit: string; privacy: string; products: Product[];
   sec_exp: string; exp_title: string; jobs: Job[];
   sec_about: string; about_title: string; about_p1: string; about_p2: string; facts: Fact[];
@@ -96,7 +97,7 @@ export const COPY: Record<Lang, Copy> = {
     kapi_tag: 'New · Gamified fitness app',
     kapi_desc: 'A workout app that plays like a game. Guided 7 to 25 minute sessions with no equipment, XP for every minute, a daily mission and a streak that respects your rest days. Weekly rankings among the people you follow, in Brazil and in your city, and workouts from your watch count too.',
     kapi_points: ['Guided workouts, 7 to 25 minutes', 'XP, daily missions and streaks', 'From first commit to Google Play in under a week'],
-    kapi_status: 'Live on Google Play · App Store in review', kapi_stack: 'Flutter · Next.js · Postgres', kapi_store: 'Get it on Google Play',
+    kapi_status: 'Live on App Store and Google Play', kapi_stack: 'Flutter · Next.js · Postgres',
     kapi_shots: [
       { src: '/assets/kapi-rankings-en.webp', alt: 'Kapi: weekly rankings among the people you follow' },
       { src: '/assets/kapi-today-en.webp', alt: 'Kapi: today, with the daily ring and XP' },
@@ -182,7 +183,7 @@ export const COPY: Record<Lang, Copy> = {
     kapi_tag: 'Novo · App de treino gamificado',
     kapi_desc: 'Um app de treino que funciona como jogo. Sessões guiadas de 7 a 25 minutos, sem equipamento, XP a cada minuto, uma missão por dia e uma sequência que respeita seus dias de descanso. Rankings semanais entre quem você segue, no Brasil e na sua cidade, e treino do relógio também conta.',
     kapi_points: ['Treinos guiados de 7 a 25 minutos', 'XP, missões diárias e sequência', 'Do primeiro commit ao Google Play em menos de uma semana'],
-    kapi_status: 'No ar no Google Play · App Store em revisão', kapi_stack: 'Flutter · Next.js · Postgres', kapi_store: 'Baixar no Google Play',
+    kapi_status: 'No ar na App Store e no Google Play', kapi_stack: 'Flutter · Next.js · Postgres',
     kapi_shots: [
       { src: '/assets/kapi-rankings-pt.webp', alt: 'Kapi: ranking da semana entre quem você segue' },
       { src: '/assets/kapi-today-pt.webp', alt: 'Kapi: hoje, com o anel do dia e o XP' },

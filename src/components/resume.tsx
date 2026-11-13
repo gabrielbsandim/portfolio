@@ -135,7 +135,7 @@ export function Resume() {
               at under one US cent each, traced in Langfuse. Next.js, PostgreSQL, Vercel, Sentry, Flutter.
             </li>
             <li>
-              <strong>Kapi</strong> (kapiapp.com.br): gamified workout app live on Google Play, App Store review pending. Guided workouts, XP,
+              <strong>Kapi</strong> (kapiapp.com.br): gamified workout app live on the App Store and Google Play. Guided workouts, XP,
               streaks and weekly rankings, watch import through Health Connect and in-app subscriptions. Flutter, Next.js,
               PostgreSQL; first commit to store listing in under a week.
             </li>

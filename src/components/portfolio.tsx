@@ -419,11 +419,14 @@ export function Portfolio() {
               </div>
             </div>
             <div className={s.featureLinks}>
-              <a href={LINKS.kapiPlay} target="_blank" rel="noreferrer" className={s.featureCta}>
-                {t.kapi_store} <span className={s.mono}>↗</span>
+              <a href={LINKS.kapi} target="_blank" rel="noreferrer" className={s.featureCta}>
+                {t.visit} <span className={s.mono}>↗</span>
               </a>
-              <a href={LINKS.kapi} target="_blank" rel="noreferrer" className={s.featureLink}>
-                kapiapp.com.br
+              <a href={LINKS.kapiIos} target="_blank" rel="noreferrer" className={s.featureLink}>
+                {t.obra_ios}
+              </a>
+              <a href={LINKS.kapiPlay} target="_blank" rel="noreferrer" className={s.featureLink}>
+                {t.obra_play}
               </a>
               <a href={LINKS.kapiPrivacy} target="_blank" rel="noreferrer" className={s.featureLink}>
                 {t.privacy}
