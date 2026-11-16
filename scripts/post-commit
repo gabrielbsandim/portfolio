@@ -1,0 +1,3 @@
+#!/bin/sh
+# Keeps the vault notes and brain-tools index in step with the site content; never blocks a commit.
+node "$(git rev-parse --show-toplevel)/scripts/export-brain.mjs" >/dev/null 2>&1 &
