@@ -8,7 +8,7 @@
     "start": "next start",
     "typecheck": "tsc --noEmit",
     "brain": "node scripts/export-brain.mjs",
-    "prepare": "cp -f scripts/post-commit .git/hooks/post-commit && chmod +x .git/hooks/post-commit scripts/post-commit"
+    "prepare": "[ -d .git/hooks ] || exit 0; cp -f scripts/post-commit .git/hooks/post-commit && chmod +x .git/hooks/post-commit scripts/post-commit"
   },
   "dependencies": {
     "next": "16.4.2",
