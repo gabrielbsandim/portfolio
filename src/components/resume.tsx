@@ -3,29 +3,30 @@ import { LINKS } from '@/content/portfolio';
 import s from './resume.module.css';
 
 const SKILL_ROWS = [
-  ['AI engineering', 'LLM APIs, Vertex AI, Amazon Bedrock, prompt caching, OCR pipelines, cost and latency tracing, AI agents, Claude Code, MCP'],
+  ['AI engineering', 'LLM APIs, Vertex AI, Amazon Bedrock, evals, prompt caching, OCR pipelines, cost and latency tracing (Langfuse, OpenTelemetry), AI agents, Claude Code, MCP'],
   ['Full stack', 'TypeScript, React, Next.js, Node.js, PostgreSQL, Micro Frontends, Design Systems'],
   ['Infra', 'Vercel, Firebase, Sentry, Langfuse, CI/CD, Azure DevOps'],
   ['Mobile and testing', 'Expo, Flutter, Ionic, Jest, code review, monitoring'],
 ] as const;
 
 const LLM_WORK = [
-  'Own the internal API our products use to call Vertex AI: configuration, cost and latency measurement, and the move to multi-provider. Proposed Langfuse for tracing, now being adopted.',
-  'Cut the cost of a complex OCR-heavy analysis from ~US$13 to ~US$6 per run with the same model, through prompt work, a better OCR step, reordered calls and explicit caching, with evals confirming quality held. Validating Amazon Bedrock with other models, projected at ~US$2.5.',
+  'Cut a complex OCR-heavy analysis from ~US$13 to ~US$0.83 per run in staging (-93%): ~US$6 on the same model through a leaner OCR prompt, reordered calls and explicit caching, then a model switch on Amazon Bedrock. Evals at each step: recall held, run-to-run agreement rose from 48% to 68%.',
+  'Own the internal API our products use to call Vertex AI and Bedrock: cost and latency measurement, multi-provider support, a PDF text layer that took exact citations from 66% to 96%, and a Langfuse pilot that showed one provider at 12% of calls and 57% of cost.',
+  'Rebuilt AI pull request review with a verifier and evals: 99.5% of real defects at 99% precision on the eval set (from 63% and 71%), at US$0.0015 and 3.7 s per review.',
 ];
 
 const AI_WORK = [
-  'Compressed ~6 months of discovery for a large initiative into days by using AI to analyze requirements, define scope, build a working prototype and write the documentation; the project was approved in under 2 weeks.',
-  'Initiated an AI agent that triages Sentry issues, reads the affected code and opens pull requests with proposed fixes, so engineers start from a reviewable diff instead of a stack trace.',
-  'Created a prototype-to-feedback pipeline that turns Lovable and Claude prototypes into deployable review builds where business stakeholders comment on specific screens and approve before development starts.',
-  'Led the team’s internal Claude Code plugin: coding standards, in-browser task validation, Azure DevOps access where MCP support is limited, workflow funnels and automated PR reviewers.',
+  'Compressed ~6 months of discovery for a large initiative into days with AI (requirements, scope, working prototype, docs); approved in under 2 weeks.',
+  'Initiated an AI agent that triages Sentry issues and opens pull requests with proposed fixes.',
+  'Built a pipeline that turns Lovable and Claude prototypes into review builds for stakeholder approval.',
+  'Led the team’s internal Claude Code plugin: coding standards, in-browser task validation, Azure DevOps access, workflow funnels and PR reviewers.',
 ];
 
 const PLATFORM_WORK = [
-  'Architected and implemented a Micro Frontends platform that lets 20+ products deploy independently, with faster and safer releases.',
-  'Built and evolved the internal Design System and shared libraries (components, tooling, monitoring, i18n) used by ~10 teams across 20+ products.',
-  'Took ownership of a critical gas cylinder tracking system and cut frontend issues from ~100 tickets a month to zero.',
-  'Delivered finance, logistics, inventory, reporting and delivery platforms for thousands of users in 5 countries; defined frontend standards and code review practices that reduced onboarding time by 50%.',
+  'Architected a Micro Frontends platform that lets 20+ products deploy independently.',
+  'Built and evolved the Design System and shared libraries used by ~10 teams across 20+ products.',
+  'Owned a critical gas cylinder tracking system and cut frontend tickets from ~100 a month to zero.',
+  'Delivered finance, logistics and delivery platforms in 5 countries; frontend standards and reviews cut onboarding time by 50%.',
 ];
 
 const SAFIRA_WORK = [
@@ -85,10 +86,10 @@ export function Resume() {
           <h2 className={s.h2}>Summary</h2>
           <p className={s.summary}>
             Full Stack Engineer with 6+ years building web and mobile products in TypeScript for enterprise platforms
-            used in 5 countries. Most of my work now is LLM engineering: I run the internal API that calls our models
-            and cut cost per analysis by more than half with the same model. I also build agents and Claude Code
-            tooling that speed up discovery, development and code review. On the side I ship and run my own apps, live
-            on the App Store and Google Play. Professional English, working with US and European teams.
+            used in 5 countries. Most of my work now is LLM engineering: I run the internal API that calls our models,
+            cut cost per analysis by 93% in staging with evals at each step, and build agents and Claude Code tooling.
+            I also ship my own apps on the App Store and Google Play. Professional English, working with US and
+            European teams.
           </p>
         </div>
 
